@@ -2,7 +2,7 @@
 
 Simple website by Isabel, created on github codespaces
 
-Hosted on render: https://basic-portfolio-fvdw.onrender.com
+Hosted on render: https://portfolio-web-app-wdtc.onrender.com/
 
 Fun To Dos:
 - [ ] add animation when you click play on music plus different options
