@@ -4,13 +4,13 @@ import './Menu.css'
 
 const BUTTON_SIZE = 25
 
-function MenuItem({ navItem, handleOpen, isFolder, isOpen }) {
+function MenuItemHeader({ navItem, isFolder, isOpen, handleOpen }) {
     const isLink = !!navItem.link
     return (
         <div style={{ display: "flex", minHeight: BUTTON_SIZE, gap: 8, alignItems: isFolder ? "center" : "flex-start" }}>
             {isFolder ? 
                 (<button 
-                    onClick={handleOpen} 
+                    onClick={handleOpen}
                     style={{
                         ...(isOpen ? { transform: "rotate(90deg)" } : {}),
                         width: BUTTON_SIZE,
@@ -27,38 +27,36 @@ function MenuItem({ navItem, handleOpen, isFolder, isOpen }) {
     )
 }
 
-export default function Menu() {
-    const [idsToOpenStatus, setIdsToOpenStatus] = useState({})
+function MenuItem(props) {
+    const { navItem } = props
+    const [isOpen, setIsOpen] = useState(false)
 
-    function handleOpen(currItem) {
-        setIdsToOpenStatus((prevIdsToOpen) => ({
-            ...prevIdsToOpen,
-            [currItem.id]: !prevIdsToOpen[currItem.id]
-        }))
+    function handleOpen() {
+        setIsOpen((prevIsOpen) => !prevIsOpen)
     }
 
-    function renderRootAndChildren(navItem) {
-        const isOpen = !!idsToOpenStatus[navItem.id]
-
-        if (navItem.children?.length) {
-            return (
-                <div>
-                    <MenuItem isFolder isOpen={isOpen} navItem={navItem} handleOpen={() => handleOpen(navItem)} />
-                    {isOpen && navItem.children.map((child) => (
-                        <div style={{ marginLeft: 35 }}>{renderRootAndChildren(child)}</div>
-                    ))}
-                </div>
-            )
-        }
-
+    if (navItem.children?.length) {
         return (
-            <MenuItem isOpen={isOpen} navItem={navItem} handleOpen={() => handleOpen(navItem)} />
+            <div>
+                <MenuItemHeader isFolder navItem={navItem} isOpen={isOpen} handleOpen={handleOpen}/>
+                {isOpen && navItem.children.map((child) => (
+                    <div style={{ marginLeft: 35 }}>
+                        <MenuItem navItem={child} />
+                    </div>
+                ))}
+            </div>
         )
     }
 
     return (
+        <MenuItemHeader navItem={navItem} isOpen={isOpen} handleOpen={handleOpen}/>
+    )
+}
+
+export default function Menu() {
+    return (
         <div className="folder" style={{ margin: 10 }}>
-            {isabelsTopNav.map((navItem) => renderRootAndChildren(navItem))}
+            {isabelsTopNav.map((navItem) => <MenuItem navItem={navItem} />)}
         </div>
     )
 }
