@@ -8,7 +8,7 @@ Fun To Dos:
 - [ ] add animation when you click play on music plus different options
 - [ ] build a game and stick it in the fun section
 - [ ] add dates to resume in --pretty-purple
-
+- [ ] margin on resume/menu plus cnbg back to 35px
 
 <!-- ### Deployment
 
