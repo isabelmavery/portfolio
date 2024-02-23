@@ -14,8 +14,8 @@ function MenuItem({ navItem, handleOpen, isFolder, isOpen }) {
     return (
         <div style={{ display: "flex", minHeight: BUTTON_SIZE, gap: 8, alignItems: isFolder ? "center" : "flex-start" }}>
             {isFolder ? 
-                (<button 
-                    onClick={handleOpen} 
+                (<button
+                    onClick={handleOpen}
                     style={{
                         ...(isOpen ? { transform: "rotate(90deg)" } : {}),
                         width: BUTTON_SIZE,

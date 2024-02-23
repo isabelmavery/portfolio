@@ -4,3 +4,9 @@
     gap: 20px;
     max-width: 70%;
 }
+
+@media screen and (max-width: 425px) {
+    .about-me-blurb {
+        max-width: 100%;
+    }
+}
