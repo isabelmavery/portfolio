@@ -1,3 +1,7 @@
+.folder {
+    overflow: auto;
+}
+
 .folder button:hover {
     background-color: var(--pretty-blue);
     color: white;
