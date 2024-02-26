@@ -51,7 +51,7 @@ function MenuItem(props) {
 
 export default function Menu() {
     return (
-        <div className="folder" style={{ margin: 10 }}>
+        <div className="folder">
             {isabelsTopNav.map((navItem) => <MenuItem navItem={navItem} />)}
         </div>
     )

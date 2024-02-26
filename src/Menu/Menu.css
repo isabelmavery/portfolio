@@ -1,5 +1,6 @@
 .folder {
     overflow: auto;
+    margin: 10px 10px 25px 10px;
 }
 
 .folder button:hover {
