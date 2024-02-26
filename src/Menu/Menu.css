@@ -5,11 +5,19 @@
 
 .folder button:hover {
     background-color: var(--pretty-blue);
-    color: white;
+}
+
+.folder button:hover .menu-arrow {
+    border-color: white;
 }
 
 .folder button {
     --button-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
     border: .2px solid var(--grey);
     border-radius: 50%;
     margin: 4px 1px;
@@ -28,3 +36,17 @@
         width: 35px;
     }
   }
+
+
+.menu-arrow {
+    display: block;
+    width: 4px;
+    height: 4px;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    transform: rotate(-45deg);
+}
+
+.menu-arrow.open {
+    transform: rotate(45deg);
+}

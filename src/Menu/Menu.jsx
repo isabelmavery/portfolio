@@ -10,12 +10,9 @@ function MenuItemHeader({ navItem, isFolder, isOpen, handleOpen }) {
             {isFolder ? 
                 (<button 
                     onClick={handleOpen}
-                    style={{
-                        ...(isOpen ? { transform: "rotate(90deg)" } : {}),
-                    }}
                 >
-                    {`>`}
-                    </button>) : "-" }
+                    <div className={isOpen ? "menu-arrow open" : "menu-arrow"}/>
+                </button>) : "-" }
             {isLink ? 
                 <a key={`${navItem.id}`} href={navItem.link}>{navItem.value}</a> 
                 : <div key={`${navItem.id}`}>{navItem.value}</div>}
