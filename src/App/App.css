@@ -5,6 +5,8 @@
     --grey: #8a8a8a;
     --pretty-blue: #89badf;
     --pretty-purple: #7297d6;
+    /* three tints down from pretty purple */
+    --pretty-purple-light: #9cb6e2;
     --pretty-organge: #eca9a9;
     --pretty-pink: #d399e7;
     --pretty-green: #d1e3bc;

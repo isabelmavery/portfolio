@@ -1,5 +1,19 @@
+.play-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 45px;
+    width: 45px;
+    border-radius: 100%;
+    background-color: white;
+    border: 4px solid var(--pretty-blue);
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
 button.music {
-    --button-size: 30px;
+    --button-size: 40px;
 
     display: flex;
     background-color: var(--pretty-blue);
@@ -10,11 +24,16 @@ button.music {
     width: var(--button-size);
     border-radius: 100%;
     border: 1px solid var(--button-grey);
-    margin-left: 20px;
-    margin-bottom: 20px;
+
 }
 
-button.music:hover {
+
+.play-container:hover {
+   border: 4px solid var(--pretty-purple-light)
+   
+}
+
+.play-container:hover button.music {
     background-color: var(--pretty-purple);
 }
 
@@ -23,6 +42,7 @@ button.music svg {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 20px;
 }
 
 .vibration {
