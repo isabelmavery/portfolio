@@ -18,7 +18,7 @@
     align-items: center;
     cursor: pointer;
 
-    border: .2px solid var(--grey);
+    border: none;
     border-radius: 50%;
     margin: 4px 1px;
     text-align: center;
