@@ -21,8 +21,8 @@ function MenuItemHeader({ navItem, isFolder, isOpen, handleOpen }) {
 }
 
 function MenuItem(props) {
-    const { navItem } = props
-    const [isOpen, setIsOpen] = useState(false)
+    const { navItem, defaultIsOpen } = props
+    const [isOpen, setIsOpen] = useState(defaultIsOpen)
 
     function handleOpen() {
         setIsOpen((prevIsOpen) => !prevIsOpen)
@@ -49,7 +49,7 @@ function MenuItem(props) {
 export default function Menu() {
     return (
         <div className="folder">
-            {isabelsTopNav.map((navItem) => <MenuItem navItem={navItem} />)}
+            {isabelsTopNav.map((navItem) => <MenuItem navItem={navItem} defaultIsOpen />)}
         </div>
     )
 }
