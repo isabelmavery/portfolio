@@ -1,0 +1,110 @@
+.game-container {
+    --game-height: 150px;
+    --player-start-y: 209px;
+    --player-start-x: 50px;
+    height: var(--game-height);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+span.space-text {
+    font-style: italic;
+    color: var(--space-blue);
+    font-weight: bold;
+}
+
+button.game-start {
+    display: block;
+    align-self: flex-end;
+    margin: 20px;
+}
+
+.player {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    /* outline: none; */
+    border-radius: 100%;
+    box-shadow: var(--basic-box-shadow);
+    background-color: var(--pretty-pink);
+    top: var(--player-start-y);
+    left: var(--player-start-x);
+}
+
+.player.jumping {
+    animation: jump;
+    animation-duration: .7s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: forwards;
+}
+
+/* Credit for gravity function - https://stackoverflow.com/questions/15423736/how-to-get-a-gravity-effect-in-a-css-animation */
+@keyframes jump {
+  0% {
+      top: var(--player-start-y);
+      animation-timing-function: cubic-bezier(0.33333, 0.66667, 0.66667, 1);
+  }
+  69.0983% {
+      top: 104px;
+      animation-timing-function: cubic-bezier(0.33333, 0, 0.66667, 0.33333);
+  }
+  100% {
+      top: var(--player-start-y);
+  }
+}
+
+.background {
+    display: flex;
+    justify-content: space-around;
+    margin-left: 20px;
+    padding: 0px 3px;
+}
+
+.move-forward .grass-bunch {
+    animation: moveForward;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+}
+
+@media screen and (max-width: 425px) {
+    .move-forward .grass-bunch {
+        animation-duration: 1s;
+    }
+}
+    
+
+.grass-bunch {
+    display: flex;
+    width: 100%;
+    transform: translateX(100%);
+}
+
+.grass {
+    width: 3px;
+    height: 12px;
+    transform: skew(-30deg); 
+    background-color: green;
+}
+
+.grass-small {
+    width: 3px;
+    height: 8px;
+    transform: skew(-15deg); 
+    background-color: green;
+    margin-top: 2px;
+}
+
+@keyframes moveForward {
+    from {
+        transform: translateX(100%);
+     }
+
+    to {
+        transform: translateX(-100%);
+     }
+  }

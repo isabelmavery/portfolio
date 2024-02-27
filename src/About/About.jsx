@@ -2,7 +2,7 @@
 import "./About.css"
 export default function About() {
     return (
-        <div className="about-me-blurb">
+        <div className="about-me-blurb primary-content text-content">
             <div >
                 Hey! My name is Isabel, and I've been working as a fullstack software engineer for the past ~ five years now.
                 I've loved getting to build products from scratch with some wonderful teams over the past few years. 

@@ -10,6 +10,7 @@
     --pretty-orange: #eca9a9;
     --pretty-pink: #d399e7;
     --pretty-green: #d1e3bc;
+    --space-blue: #142C8F;
     --primary-background-color: antiquewhite;
     --basic-box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px;
     
@@ -66,15 +67,18 @@ body, html, #root {
     color: white;
 }
 
-.content {
+.primary-content {
     margin: 40px 20px;
     /* added for fun todo edit */
     background-color: var(--pretty-green);
-    padding: 25px;
     border-radius: 30px;
     box-shadow: var(--basic-box-shadow);
     border: 1px solid var(--primary-background-color);
+    overflow: hidden;
+}
 
+.text-content {
+    padding: 25px;
 }
 
 footer {

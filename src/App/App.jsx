@@ -7,10 +7,7 @@ import Home from '../Home'
 import Footer from "./Footer";
 import About from '../About/About'
 import MusicPlayer from "../MusicPlayer/MusicPlayer";
-
-function Fun() {
-  return <div>Coming Soon</div>
-}
+import Game from '../Game/Game'
 
 export default function App() {
   return (
@@ -23,14 +20,14 @@ export default function App() {
                 <Link to="/about">About</Link>
               </div>
               <div className="menu-item">
-                <Link to="/fun">Fun !!!</Link>
+                <Link to="/fun">For Fun</Link>
               </div>
           </div>
 
-        <div className="content">
+        <div>
           <Routes>
             <Route path="/about" element={<About/>}/>
-            <Route path="/fun" element={<Fun/>}/>
+            <Route path="/fun" element={<Game/>}/>
             <Route path="/" element={<Home/>}/>
           </Routes>
         </div>
