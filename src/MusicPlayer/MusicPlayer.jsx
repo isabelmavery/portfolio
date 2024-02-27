@@ -8,7 +8,7 @@ function Animation() {
 }
 export default function MusicPlayer() {
     const [isPlaying, setIsPlaying] = useState(false)
-    const [play, { stop }] = useSound(spanishGuitar);
+    const [play, { stop }] = useSound(spanishGuitar, { loop: true });
     return (
       <div className="music-container">
         <Animation/>

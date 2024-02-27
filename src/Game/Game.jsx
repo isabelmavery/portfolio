@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import "./Game.css"
 import Player from './Player'
 
@@ -26,8 +26,14 @@ function BackGround({ isActive }) {
 export default function Game() {
     const [isActive, setIsActive] = useState(false)
     const playerRef = useRef(null);
+    const buttonRef = useRef(null); 
 
-    const handleClick = () => {
+    useEffect(() => {
+        // initialize with focus on start button to allow access via keys
+        buttonRef.current.focus()
+    }, [])
+
+    const handleToggleStart = () => {
         if (isActive) {
             setIsActive(false)
             playerRef.current.blur();
@@ -40,11 +46,11 @@ export default function Game() {
     return (
         <div style={{ textAlign: "center"}}>
             <div className='game-container primary-content'>
-                <button className='game-start' onClick={handleClick}>{isActive ? "Exit" : "Start"} </button>
+                <button ref={buttonRef} className='game-start' onClick={handleToggleStart}>{isActive ? "Exit" : "Start"} </button>
                 <Player ref={playerRef} />
                 <BackGround isActive={isActive}/>
             </div>
-            {isActive && <div>Press <span className='space-text'>Space</span> to Jump to your Heart's Content!</div>}
+            <div>Press <span className='space-text'>Space</span> to Jump to your Heart's Content!</div>
         </div>
     )
 }

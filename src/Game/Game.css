@@ -99,6 +99,7 @@ button.game-start {
     margin-top: 2px;
 }
 
+/* https://medium.com/@RitikaAgrawal08/recreating-marquee-loop-animation-with-css-ef3faa24d2ab */
 @keyframes moveForward {
     from {
         transform: translateX(100%);
