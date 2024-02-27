@@ -35,6 +35,7 @@ const Player = React.forwardRef((props, ref) => {
         tabIndex={0} 
         className={jumping ? "jumping player" : "player"} 
         onKeyDown={(e) => handleMovement(e)}
+        onClick={handleJump}
         ref={ref}/>)
 })
 

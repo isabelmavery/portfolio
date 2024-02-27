@@ -50,7 +50,7 @@ export default function Game() {
                 <Player ref={playerRef} />
                 <BackGround isActive={isActive}/>
             </div>
-            <div>Press <span className='space-text'>Space</span> to Jump to your Heart's Content!</div>
+            <div>Press <span className='space-text'>Space</span> or <span className='space-text'>Tap</span> to Jump to your Heart's Content!</div>
         </div>
     )
 }
