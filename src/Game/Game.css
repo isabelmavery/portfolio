@@ -24,7 +24,7 @@ button.game-start {
     position: absolute;
     width: 40px;
     height: 40px;
-    /* outline: none; */
+    outline: none;
     border-radius: 100%;
     box-shadow: var(--basic-box-shadow);
     background-color: var(--pretty-pink);
