@@ -25,7 +25,7 @@ export default function MakingFriends() {
     return newColor;
   }
 
-  if (!socket.current)
+  if (!socket?.current)
     return (
       <div className="primary-content text-content making-friends-container">
         Looks like you don't have a connection right now, try to chat again
