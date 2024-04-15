@@ -69,7 +69,6 @@ export default function MakingFriends() {
           onChange={(e) => {
             setNewChatMessage(e.target.value);
           }}
-          onKey
         />
 
         <button type="submit">Send ➷‿➹⁀➷</button>
