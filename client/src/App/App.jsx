@@ -24,11 +24,13 @@ export default function App() {
         </div>
       </div>
 
-      <Routes>
-        <Route path="/about" element={<About />} />
-        <Route path="/fun" element={<ForFun />} />
-        <Route path="/" element={<Home />} />
-      </Routes>
+      <div className="content-container">
+        <Routes>
+          <Route path="/about" element={<About />} />
+          <Route path="/fun" element={<ForFun />} />
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </div>
 
       <div className="bottom-bar">
         <MusicPlayer />
