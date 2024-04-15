@@ -1,55 +1,73 @@
-import { useState } from "react"
-import { isabelsTopNav } from './menuData'
-import './Menu.css'
-
+import { useState } from "react";
+import { isabelsTopNav } from "./menuData";
+import "./Menu.css";
 
 function MenuItemHeader({ navItem, isFolder, isOpen, handleOpen }) {
-    const isLink = !!navItem.link
-    return (
-        <div style={{ display: "flex", gap: 8, alignItems: isFolder ? "center" : "flex-start" }}>
-            {isFolder ? 
-                (<button 
-                    onClick={handleOpen}
-                >
-                    <div className={isOpen ? "menu-arrow open" : "menu-arrow"}/>
-                </button>) : "-" }
-            {isLink ? 
-                <a key={`${navItem.id}`} href={navItem.link}>{navItem.value}</a> 
-                : <div key={`${navItem.id}`}>{navItem.value}</div>}
-        </div>
-    )
+  const isLink = !!navItem.link;
+  return (
+    <div
+      style={{
+        display: "flex",
+        gap: 8,
+        alignItems: isFolder ? "center" : "flex-start",
+      }}
+    >
+      {isFolder ? (
+        <button onClick={handleOpen}>
+          <div className={isOpen ? "menu-arrow open" : "menu-arrow"} />
+        </button>
+      ) : (
+        "-"
+      )}
+      {isLink ? (
+        <a key={`${navItem.id}`} href={navItem.link}>
+          {navItem.value}
+        </a>
+      ) : (
+        <div key={`${navItem.id}`}>{navItem.value}</div>
+      )}
+    </div>
+  );
 }
 
 function MenuItem(props) {
-    const { navItem, defaultIsOpen } = props
-    const [isOpen, setIsOpen] = useState(defaultIsOpen)
+  const { navItem, defaultIsOpen } = props;
+  const [isOpen, setIsOpen] = useState(defaultIsOpen);
 
-    function handleOpen() {
-        setIsOpen((prevIsOpen) => !prevIsOpen)
-    }
+  function handleOpen() {
+    setIsOpen((prevIsOpen) => !prevIsOpen);
+  }
 
-    if (navItem.children?.length) {
-        return (
-            <div>
-                <MenuItemHeader isFolder navItem={navItem} isOpen={isOpen} handleOpen={handleOpen}/>
-                {isOpen && navItem.children.map((child) => (
-                    <div className="tree-item-child">
-                        <MenuItem navItem={child} />
-                    </div>
-                ))}
-            </div>
-        )
-    }
-
+  if (navItem.children?.length) {
     return (
-        <MenuItemHeader navItem={navItem} isOpen={isOpen} handleOpen={handleOpen}/>
-    )
+      <div>
+        <MenuItemHeader
+          isFolder
+          navItem={navItem}
+          isOpen={isOpen}
+          handleOpen={handleOpen}
+        />
+        {isOpen &&
+          navItem.children.map((child, i) => (
+            <div className="tree-item-child" key={i}>
+              <MenuItem navItem={child} />
+            </div>
+          ))}
+      </div>
+    );
+  }
+
+  return (
+    <MenuItemHeader navItem={navItem} isOpen={isOpen} handleOpen={handleOpen} />
+  );
 }
 
 export default function Menu() {
-    return (
-        <div className="folder">
-            {isabelsTopNav.map((navItem) => <MenuItem navItem={navItem} defaultIsOpen />)}
-        </div>
-    )
+  return (
+    <div className="folder">
+      {isabelsTopNav.map((navItem, i) => (
+        <MenuItem navItem={navItem} key={`menu-${i}`} defaultIsOpen />
+      ))}
+    </div>
+  );
 }
