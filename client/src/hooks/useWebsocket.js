@@ -3,29 +3,31 @@ import { useEffect, useState, useRef } from "react";
 
 const SocketType = {
   ITEM: "item",
-  COUNT: "count",
+  CLIENTS: "clients",
+  UID: "uid",
 };
 
 export default function useWebsocket() {
   const socket = useRef(null);
-  const [items, setItems] = useState({});
-  const [count, setCount] = useState(0);
+  const [chatMessages, setChatMessages] = useState([]);
+  const [clients, setClients] = useState([]);
+  const [uid, setUid] = useState();
 
   const updateMessageLocally = (update) => {
-    const {
-      type,
-      data: { id, value },
-    } = update;
+    const { type, data: { key, value } = {} } = update;
 
     switch (type) {
       case SocketType.ITEM:
-        setItems((prevItems) => ({
-          ...prevItems,
-          [id]: value,
-        }));
+        setChatMessages((prevMsgs) => [
+          ...prevMsgs,
+          { key, value, uid: update.uid },
+        ]);
         break;
-      case SocketType.COUNT:
-        setCount(value);
+      case SocketType.CLIENTS:
+        setClients(value);
+        break;
+      case SocketType.UID:
+        setUid(update.uid);
         break;
     }
   };
@@ -74,7 +76,8 @@ export default function useWebsocket() {
 
   return {
     sendMessage,
-    items,
-    count,
+    chatMessages,
+    clients,
+    uid,
   };
 }

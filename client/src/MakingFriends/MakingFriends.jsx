@@ -2,46 +2,72 @@ import React, { useState } from "react";
 import useWebsocket from "../hooks/useWebsocket";
 import "./MakingFriends.css";
 
+const getRandomColor = () => {
+  return (
+    "#" +
+    Math.floor(Math.random() * 16777215)
+      .toString(16)
+      .padStart(6, "0")
+  );
+};
+
 export default function MakingFriends() {
-  const { items, sendMessage, count } = useWebsocket();
-  const [newItem, setNewItem] = useState("");
+  const { chatMessages, sendMessage, clients, uid } = useWebsocket();
+  const [newChatMessage, setNewChatMessage] = useState("");
+  const [uidToColors, setUidToColors] = useState({});
+
+  function getUserColor(chatMsg) {
+    if (uidToColors[chatMsg.uid]) {
+      return uidToColors[chatMsg.uid];
+    }
+    const newColor = getRandomColor();
+    setUidToColors((prev) => ({ ...prev, [chatMsg.uid]: newColor }));
+    return newColor;
+  }
 
   return (
     <div className="primary-content text-content making-friends-container">
       <div>
-        {count < 2
-          ? `${count} person here! Welcome :)`
-          : `${count} people are here! Say hey to eachother :)`}
+        {clients.length < 2
+          ? `${clients.length} person here! Welcome :)`
+          : `${clients.length} people are here! Say hey to eachother`}
       </div>
 
-      <div className="chat-box">
-        {Object.entries(items).map(([key, value]) => (
-          <div key={key}>
-            {`> `}
-            {value}
-          </div>
-        ))}
+      <div className="chat-box-container">
+        <div className="chat-box">
+          {chatMessages.map((chatMsg) => (
+            <div key={chatMsg.key} className="chat-msg">
+              <span className="user" style={{ color: getUserColor(chatMsg) }}>
+                {chatMsg.uid.slice(0, 3)}
+              </span>
+              {` > `}
+              {chatMsg.value}
+            </div>
+          ))}
+          <div id="anchor" />
+        </div>
       </div>
 
       <form
         onSubmit={(e) => {
           e.preventDefault();
-          if (!newItem.length) return;
+          if (!newChatMessage.length) return;
           sendMessage({
+            uid,
             type: "item",
             data: {
               id: crypto.randomUUID(),
-              value: newItem,
+              value: newChatMessage,
             },
           });
-          setNewItem("");
+          setNewChatMessage("");
         }}
       >
         <input
           placeholder="What was your rose today?"
-          value={newItem}
+          value={newChatMessage}
           onChange={(e) => {
-            setNewItem(e.target.value);
+            setNewChatMessage(e.target.value);
           }}
           onKey
         />

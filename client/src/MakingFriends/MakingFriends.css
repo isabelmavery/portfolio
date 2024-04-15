@@ -1,12 +1,34 @@
-.making-friends-container {
-  margin: 40px 20px;
+.chat-box-container {
+  background-color: var(--pretty-blue);
+  overflow: hidden;
+  padding: 20px;
+  margin: 20px 0px;
+  border-radius: 30px;
 }
 
 .chat-box {
-  padding: 20px;
-  margin: 20px;
-  border-radius: 30px;
-  overflow: scroll;
   height: 140px;
-  background-color: var(--pretty-blue);
+  overflow: scroll;
+}
+
+.chat-msg .user {
+  font-weight: bold;
+}
+
+.chat-box * {
+  overflow-anchor: none;
+}
+
+.chat-box #anchor {
+  overflow-anchor: auto;
+  height: 1px;
+}
+
+.making-friends-container form {
+  display: flex;
+  gap: 5px;
+}
+
+.making-friends-container form input {
+  width: 30%;
 }
