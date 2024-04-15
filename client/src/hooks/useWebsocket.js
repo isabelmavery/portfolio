@@ -75,6 +75,7 @@ export default function useWebsocket() {
   };
 
   return {
+    socket,
     sendMessage,
     chatMessages,
     clients,

@@ -12,7 +12,7 @@ const getRandomColor = () => {
 };
 
 export default function MakingFriends() {
-  const { chatMessages, sendMessage, clients, uid } = useWebsocket();
+  const { chatMessages, sendMessage, clients, uid, socket } = useWebsocket();
   const [newChatMessage, setNewChatMessage] = useState("");
   const [uidToColors, setUidToColors] = useState({});
 
@@ -25,10 +25,18 @@ export default function MakingFriends() {
     return newColor;
   }
 
+  if (!socket.current)
+    return (
+      <div className="primary-content text-content making-friends-container">
+        Looks like you don't have a connection right now, try to chat again
+        later.
+      </div>
+    );
+
   return (
     <div className="primary-content text-content making-friends-container">
       <div>
-        {clients.length < 2
+        {clients.length === 1
           ? `${clients.length} person here! Welcome :)`
           : `${clients.length} people are here! Say hey to eachother`}
       </div>

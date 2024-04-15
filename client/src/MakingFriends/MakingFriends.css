@@ -27,8 +27,15 @@
 .making-friends-container form {
   display: flex;
   gap: 5px;
+  flex-wrap: wrap;
 }
 
 .making-friends-container form input {
-  width: 30%;
+  width: 35%;
+}
+
+@media screen and (max-width: 425px) {
+  .making-friends-container form input {
+    width: 100%;
+  }
 }
