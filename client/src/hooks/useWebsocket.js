@@ -1,4 +1,4 @@
-const WS_ENV = `ws://localhost:${import.meta.env.VITE_WS_PORT}`;
+const WS_ENV = import.meta.env.VITE_WS_URL;
 import { useEffect, useState, useRef } from "react";
 
 const SocketType = {
