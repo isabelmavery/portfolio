@@ -17,6 +17,7 @@ export default function MakingFriends() {
   const [uidToColors, setUidToColors] = useState({});
 
   function getUserColor(chatMsg) {
+    // Note, think more about this. I'm not sure if it is necessary to use state here? is there a better way..
     if (uidToColors[chatMsg.uid]) {
       return uidToColors[chatMsg.uid];
     }
