@@ -1,3 +1,9 @@
+.making-friends-container {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .chat-box-container {
   background-color: var(--pretty-blue);
   overflow: hidden;

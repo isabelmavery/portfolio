@@ -89,3 +89,9 @@ footer {
   margin-top: auto;
   margin-bottom: 20px;
 }
+
+.justify-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

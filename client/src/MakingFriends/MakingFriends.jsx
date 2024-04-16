@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import useWebsocket from "../hooks/useWebsocket";
 import "./MakingFriends.css";
+import LoadingGrid from "../components/LoadingGrid/LoadingGrid";
 
 const getRandomColor = () => {
   return (
@@ -12,7 +13,8 @@ const getRandomColor = () => {
 };
 
 export default function MakingFriends() {
-  const { chatMessages, sendMessage, clients, uid, socket } = useWebsocket();
+  const { chatMessages, sendMessage, clients, uid, socket, loading } =
+    useWebsocket();
   const [newChatMessage, setNewChatMessage] = useState("");
   const [uidToColors, setUidToColors] = useState({});
 
@@ -26,11 +28,19 @@ export default function MakingFriends() {
     return newColor;
   }
 
+  if (loading) {
+    return (
+      <div className="primary-content text-content making-friends-container justify-center">
+        <LoadingGrid />
+      </div>
+    );
+  }
+
   if (!socket?.current)
     return (
       <div className="primary-content text-content making-friends-container">
-        Looks like you don't have a connection right now, try to chat again
-        later.
+        Looks like you aren't connected to our server right now, try to connect
+        to the chat again later.
       </div>
     );
 

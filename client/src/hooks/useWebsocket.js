@@ -9,6 +9,7 @@ const SocketType = {
 
 export default function useWebsocket() {
   const socket = useRef(null);
+  const [loading, setLoading] = useState(false);
   const [chatMessages, setChatMessages] = useState([]);
   const [clients, setClients] = useState([]);
   const [uid, setUid] = useState();
@@ -34,8 +35,10 @@ export default function useWebsocket() {
 
   useEffect(() => {
     socket.current = new WebSocket(WS_ENV);
+    setLoading(true);
     socket.current.onopen = (e) => {
       console.log("connection established", e);
+      setLoading(false);
     };
     /** Message event happens usually when the server sends some data. Messages sent by the server to the client can include plain text messages, binary data or images */
     socket.current.onmessage = (e) => {
@@ -44,9 +47,11 @@ export default function useWebsocket() {
     };
     socket.current.onerror = (e) => {
       console.log("connection error", e);
+      setLoading(false);
     };
     socket.current.onclose = (e) => {
       console.log("connection closed", e);
+      setLoading(false);
       if (socket.current.readyState === WebSocket.OPEN) {
         socket.current.close();
       }
@@ -80,5 +85,6 @@ export default function useWebsocket() {
     chatMessages,
     clients,
     uid,
+    loading,
   };
 }
