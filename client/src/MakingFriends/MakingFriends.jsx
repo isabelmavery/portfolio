@@ -30,8 +30,12 @@ export default function MakingFriends() {
 
   if (loading) {
     return (
-      <div className="primary-content text-content making-friends-container justify-center">
+      <div className="loading-grid primary-content text-content making-friends-container justify-center">
         <LoadingGrid />
+        <div className="label">
+          Loading . . . i'm using the free version of render so this may take
+          50s to load if spinned down :')
+        </div>
       </div>
     );
   }

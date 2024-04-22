@@ -4,6 +4,17 @@
   flex-direction: column;
   justify-content: center;
 }
+
+.loading-grid {
+  justify-content: space-around;
+  gap: 10px;
+  color: var(--pretty-purple);
+}
+
+.loading-grid .label {
+  width: 70%;
+}
+
 .chat-box-container {
   background-color: var(--pretty-blue);
   overflow: hidden;
@@ -42,6 +53,14 @@
 
 @media screen and (max-width: 425px) {
   .making-friends-container form input {
+    width: 100%;
+  }
+
+  .loading-grid {
+    justify-content: space-between;
+  }
+
+  .loading-grid .label {
     width: 100%;
   }
 }
