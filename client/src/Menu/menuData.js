@@ -94,7 +94,7 @@ export const isabelsTopNav = [
       {
         id: 9,
         link: "https://medium.com/fanatics-tech-blog/enabling-fans-to-discover-their-favorite-teams-gear-43da19801b1c",
-        value: "Blog - Building Dynamic Nav",
+        value: "Building Dynamic Navigation",
         children: [],
       },
     ],
