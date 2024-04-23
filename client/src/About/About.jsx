@@ -13,7 +13,7 @@ export default function About() {
           I am from the chicago area originally (Evanston) and love a lot of
           things outside of work, though they seem to change from month to
           month. Right now I'm very into yoga, Chappel Roan and Neil Gaimen but
-          that could change by March :)
+          that could change by April :)
         </div>
       </div>
     </>
