@@ -10,7 +10,12 @@
     "start": "node index.js"
   },
   "dependencies": {
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.12.9",
+    "@types/react": "^18.3.1",
+    "@types/react-dom": "^18.3.0",
     "express": "^4.19.2",
+    "typescript": "^5.4.5",
     "ws": "^8.16.0"
   }
 }

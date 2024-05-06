@@ -1,0 +1,102 @@
+.coffee-shop-container {
+  --coffee-shop-brown: #ad6a1d;
+  --coffee-shop-beige: #d5b39c;
+  --coffee-shop-pink: #b3736c;
+  --coffee-shop-red: #712d29;
+  --coffee-shop-light-brown: #a64b00;
+
+  background-color: var(--coffee-shop-brown);
+  height: 406px;
+  width: 486px;
+  display: flex;
+  margin: 20px;
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.coffee-shop-walls {
+  background-color: var(--coffee-shop-beige);
+  margin: 20px;
+  padding: 22px;
+  width: 100%;
+}
+
+.upcoming-orders {
+  background-color: var(--coffee-shop-brown);
+  height: 118px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.orders-container {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: -5px;
+}
+
+.orders-container svg {
+  width: 60px;
+  height: 60px;
+}
+
+.counter {
+  background-color: var(--coffee-shop-light-brown);
+  height: 16px;
+  margin: 0px 12px;
+  margin-bottom: 12px;
+}
+
+.coffee-shop-container .bottom {
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+}
+
+.coffee-shop-board {
+  display: flex;
+  flex-direction: column;
+}
+
+.coffee-shop-board .current-balance {
+  background-color: var(--coffee-shop-pink);
+  margin-top: 20px;
+  margin-bottom: 12px;
+  height: 120px;
+  width: 120px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 5px;
+}
+
+.star {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.star .balance-value {
+  position: absolute;
+  margin-top: 10px;
+}
+
+.coffee-shop-board button {
+  background-color: var(--coffee-shop-red);
+  border: 1px solid var(--coffee-shop-pink);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  width: 164px;
+  padding: 14px 5px;
+
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+}
+
+.current-order {
+  margin-top: 18px;
+}

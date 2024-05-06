@@ -8,6 +8,7 @@ import Footer from "./Footer";
 import About from "../About/About";
 import MusicPlayer from "../MusicPlayer/MusicPlayer";
 import ForFun from "../Pages/ForFun";
+import CoffeeShop from "../CoffeeShop/CoffeeShop";
 
 export default function App() {
   return (
@@ -22,12 +23,16 @@ export default function App() {
         <div className="menu-item">
           <Link to="/fun">For Fun</Link>
         </div>
+        {/* <div className="menu-item">
+          <Link to="/cafe">Cafe</Link>
+        </div> */}
       </div>
 
       <div className="content-container">
         <Routes>
           <Route path="/about" element={<About />} />
           <Route path="/fun" element={<ForFun />} />
+          {/* <Route path="/cafe" element={<CoffeeShop />} /> */}
           <Route path="/" element={<Home />} />
         </Routes>
       </div>
