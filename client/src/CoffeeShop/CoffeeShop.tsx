@@ -2,6 +2,11 @@ import { useState } from "react";
 import "./CoffeeShop.css";
 import Americano from "./americano";
 import Star from "./star";
+
+/**
+Notion Planning doc and Figma here if you are curious! Side project since I spend so much time in coffee shops :) 
+https://quiet-fireman-c5b.notion.site/Practice-Design-Virtual-Coffee-Shop-b8a55929ef89459895d32a5004ca5ff2?pvs=4
+ */
 export default function CoffeeShop() {
   const [orders, setOrders] = useState([]);
 
