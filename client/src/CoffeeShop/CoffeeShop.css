@@ -19,24 +19,27 @@
   background-color: var(--coffee-shop-beige);
   margin: 20px;
   padding: 22px;
-  width: 100%;
 }
 
-.upcoming-orders {
+.counter-container {
   background-color: var(--coffee-shop-brown);
   height: 118px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  padding: 0px 12px;
 }
 
-.orders-container {
+.upcoming-orders {
+  position: absolute;
   display: flex;
-  justify-content: space-around;
-  margin-bottom: -5px;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-bottom: 10px;
+  padding: 0px 15px;
 }
 
-.orders-container svg {
+.upcoming-orders svg {
   width: 60px;
   height: 60px;
 }
@@ -44,7 +47,7 @@
 .counter {
   background-color: var(--coffee-shop-light-brown);
   height: 16px;
-  margin: 0px 12px;
+
   margin-bottom: 12px;
 }
 
@@ -95,6 +98,19 @@
   font-size: 12px;
   font-weight: bold;
   color: white;
+  cursor: pointer;
+}
+
+.coffee-shop-board button:hover {
+  filter: brightness(110%);
+}
+
+.coffee-shop-board .menu button {
+  background-color: var(--coffee-shop-pink);
+  border: 1px solid var(--coffee-shop-red);
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 15px;
 }
 
 .current-order {

@@ -23,16 +23,16 @@ export default function App() {
         <div className="menu-item">
           <Link to="/fun">For Fun</Link>
         </div>
-        {/* <div className="menu-item">
+        <div className="menu-item">
           <Link to="/cafe">Cafe</Link>
-        </div> */}
+        </div>
       </div>
 
       <div className="content-container">
         <Routes>
           <Route path="/about" element={<About />} />
           <Route path="/fun" element={<ForFun />} />
-          {/* <Route path="/cafe" element={<CoffeeShop />} /> */}
+          <Route path="/cafe" element={<CoffeeShop />} />
           <Route path="/" element={<Home />} />
         </Routes>
       </div>
