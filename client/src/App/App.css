@@ -45,6 +45,10 @@ html,
   background-color: var(--pretty-blue);
 }
 
+.content-container {
+  z-index: 1;
+}
+
 .bottom-bar {
   display: flex;
   justify-content: space-between;

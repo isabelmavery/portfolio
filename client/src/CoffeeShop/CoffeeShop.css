@@ -1,4 +1,8 @@
 .coffee-shop-container {
+  display: flex;
+  justify-content: center;
+}
+.coffee-shop-border {
   --coffee-shop-brown: #ad6a1d;
   --coffee-shop-beige: #d5b39c;
   --coffee-shop-pink: #b3736c;
@@ -15,7 +19,7 @@
   font-size: 12px;
 }
 
-.coffee-shop-walls {
+.coffee-shop-background {
   background-color: var(--coffee-shop-beige);
   margin: 20px;
   padding: 22px;
@@ -51,7 +55,7 @@
   margin-bottom: 12px;
 }
 
-.coffee-shop-container .bottom {
+.coffee-shop-border .bottom {
   display: flex;
   gap: 12px;
   justify-content: space-between;

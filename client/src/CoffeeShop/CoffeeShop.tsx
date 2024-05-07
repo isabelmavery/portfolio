@@ -73,47 +73,49 @@ export default function CoffeeShop() {
         Work in progress...
       </div>
       <div className="coffee-shop-container">
-        <div className="coffee-shop-walls">
-          <div className="counter-container">
-            <div className="upcoming-orders">
-              {/* only ever show the upcoming 5 */}
-              {orders
-                .slice(0, 5)
-                .reverse()
-                .map((order, i) => (
-                  <Americano />
-                ))}
-            </div>
-            <div className="counter"></div>
-          </div>
-          <div className="bottom">
-            <div className="coffee-shop-board">
-              <div className="current-balance">
-                <span>Your </span>
-                <span>Balance</span>
-                <Star>{20}</Star>
+        <div className="coffee-shop-border">
+          <div className="coffee-shop-background">
+            <div className="counter-container">
+              <div className="upcoming-orders">
+                {/* only ever show the upcoming 5 */}
+                {orders
+                  .slice(0, 5)
+                  .reverse()
+                  .map((order, i) => (
+                    <Americano />
+                  ))}
               </div>
-
-              <button onClick={toggleMenu}>What would you like?</button>
-              {menuOpen && (
-                <div className="menu">
-                  <button onClick={() => createOrder(OrderType.Cortado)}>
-                    <span>{OrderType.Cortado}</span>{" "}
-                    <span>{OrderPrice[OrderType.Cortado]}</span>
-                  </button>
-                  <button onClick={() => createOrder(OrderType.Americano)}>
-                    <span>{OrderType.Americano}</span>{" "}
-                    <span>{OrderPrice[OrderType.Americano]}</span>
-                  </button>
-                  <button onClick={() => createOrder(OrderType.Tea)}>
-                    <span>{OrderType.Tea}</span>{" "}
-                    <span>{OrderPrice[OrderType.Tea]}</span>
-                  </button>
-                </div>
-              )}
+              <div className="counter"></div>
             </div>
-            <div className="current-order">
-              <Americano />
+            <div className="bottom">
+              <div className="coffee-shop-board">
+                <div className="current-balance">
+                  <span>Your </span>
+                  <span>Balance</span>
+                  <Star>{20}</Star>
+                </div>
+
+                <button onClick={toggleMenu}>What would you like?</button>
+                {menuOpen && (
+                  <div className="menu">
+                    <button onClick={() => createOrder(OrderType.Cortado)}>
+                      <span>{OrderType.Cortado}</span>{" "}
+                      <span>{OrderPrice[OrderType.Cortado]}</span>
+                    </button>
+                    <button onClick={() => createOrder(OrderType.Americano)}>
+                      <span>{OrderType.Americano}</span>{" "}
+                      <span>{OrderPrice[OrderType.Americano]}</span>
+                    </button>
+                    <button onClick={() => createOrder(OrderType.Tea)}>
+                      <span>{OrderType.Tea}</span>{" "}
+                      <span>{OrderPrice[OrderType.Tea]}</span>
+                    </button>
+                  </div>
+                )}
+              </div>
+              <div className="current-order">
+                <Americano />
+              </div>
             </div>
           </div>
         </div>
