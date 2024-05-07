@@ -123,7 +123,7 @@ export default function CoffeeShop() {
                 <div className="current-balance">
                   <span>Your </span>
                   <span>Balance</span>
-                  <Star>{20}</Star>
+                  <Star>{" ∞ "}</Star>
                 </div>
 
                 <button onClick={toggleMenu}>What would you like?</button>
