@@ -7,10 +7,10 @@ export default function EmptyDrink() {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g filter="url(#filter0_d_0_1)">
+      <g filter="url(#filter0_d_16_131)">
         <ellipse cx="115" cy="80.5" rx="111" ry="50.5" fill="#D0DFE4" />
       </g>
-      <g filter="url(#filter1_i_0_1)">
+      <g filter="url(#filter1_i_16_131)">
         <ellipse cx="115" cy="76.5" rx="69" ry="31.5" fill="#D0DFE4" />
       </g>
       <path
@@ -19,17 +19,17 @@ export default function EmptyDrink() {
         stroke="#DBD9D9"
         stroke-width="2"
       />
-      <g filter="url(#filter2_f_0_1)">
+      <g filter="url(#filter2_f_16_131)">
         <ellipse cx="114" cy="24.5" rx="62.5" ry="20.5" fill="white" />
       </g>
       <path
         d="M168 24C168 32.2843 144.271 39 115 39C85.7289 39 62 32.2843 62 24C62 15.7157 85.7289 9 115 9C144.271 9 168 15.7157 168 24Z"
-        fill="url(#paint0_linear_0_1)"
+        fill="url(#paint0_linear_16_131)"
         fill-opacity="0.35"
       />
       <defs>
         <filter
-          id="filter0_d_0_1"
+          id="filter0_d_16_131"
           x="0"
           y="30"
           width="230"
@@ -54,17 +54,17 @@ export default function EmptyDrink() {
           <feBlend
             mode="normal"
             in2="BackgroundImageFix"
-            result="effect1_dropShadow_0_1"
+            result="effect1_dropShadow_16_131"
           />
           <feBlend
             mode="normal"
             in="SourceGraphic"
-            in2="effect1_dropShadow_0_1"
+            in2="effect1_dropShadow_16_131"
             result="shape"
           />
         </filter>
         <filter
-          id="filter1_i_0_1"
+          id="filter1_i_16_131"
           x="46"
           y="45"
           width="138"
@@ -92,10 +92,14 @@ export default function EmptyDrink() {
             type="matrix"
             values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
           />
-          <feBlend mode="normal" in2="shape" result="effect1_innerShadow_0_1" />
+          <feBlend
+            mode="normal"
+            in2="shape"
+            result="effect1_innerShadow_16_131"
+          />
         </filter>
         <filter
-          id="filter2_f_0_1"
+          id="filter2_f_16_131"
           x="47.5"
           y="0"
           width="133"
@@ -112,11 +116,11 @@ export default function EmptyDrink() {
           />
           <feGaussianBlur
             stdDeviation="2"
-            result="effect1_foregroundBlur_0_1"
+            result="effect1_foregroundBlur_16_131"
           />
         </filter>
         <linearGradient
-          id="paint0_linear_0_1"
+          id="paint0_linear_16_131"
           x1="115"
           y1="9"
           x2="115"

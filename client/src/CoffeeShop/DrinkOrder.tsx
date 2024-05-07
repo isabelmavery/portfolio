@@ -4,6 +4,7 @@ import Tea from "./Drinks/Tea";
 import Americano from "./Drinks/Americano";
 import EmptyDrink from "./Drinks/EmptyDrink";
 import EmptyPlate from "./Drinks/EmptyPlate";
+import "./DrinkOrder.css";
 
 export default function DrinkOrder(props: {
   orderType: OrderType;
@@ -27,5 +28,9 @@ export default function DrinkOrder(props: {
     }
   }
 
-  return <div onClick={onClick}>{renderDrink()}</div>;
+  return (
+    <div className="drink-order" onClick={onClick}>
+      {renderDrink()}
+    </div>
+  );
 }
