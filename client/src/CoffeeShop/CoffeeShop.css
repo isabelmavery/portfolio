@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
 }
+
 .coffee-shop-border {
   --coffee-shop-brown: #ad6a1d;
   --coffee-shop-beige: #d5b39c;
@@ -118,5 +119,10 @@
 }
 
 .current-order {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
   margin-top: 18px;
+  width: 230px;
+  height: 188px;
 }

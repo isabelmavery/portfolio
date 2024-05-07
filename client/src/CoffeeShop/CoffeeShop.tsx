@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./CoffeeShop.css";
-import Americano from "./americano";
+import DrinkOrder from "./DrinkOrder";
 import Star from "./star";
 
 /**
@@ -8,16 +8,20 @@ Notion Planning doc and Figma here if you are curious! Side project since I spen
 https://quiet-fireman-c5b.notion.site/Practice-Design-Virtual-Coffee-Shop-b8a55929ef89459895d32a5004ca5ff2?pvs=4
  */
 
-enum OrderType {
+export enum OrderType {
   Americano = "Americano",
   Tea = "Tea",
   Cortado = "Cortado",
+  EmptyDrink = "EmptyDrink",
+  EmptyPlate = "EmptyPlate",
 }
 
 const OrderPrice = {
   [OrderType.Americano]: 3,
   [OrderType.Tea]: 3,
   [OrderType.Cortado]: 4,
+  [OrderType.EmptyDrink]: null,
+  [OrderType.EmptyPlate]: null,
 };
 
 enum OrderStatus {
@@ -32,11 +36,16 @@ type Order = {
   createdAt: Date;
   userId: string;
   status: OrderStatus;
-  payment: number;
+  payment: number | null;
 };
+
 export default function CoffeeShop() {
+  const [activeDrinkType, setActiveDrinkType] = useState(OrderType.EmptyPlate);
   const [orders, setOrders] = useState<Order[]>([]);
   const [menuOpen, setMenuOpen] = useState(false);
+  const isEmpty =
+    activeDrinkType === OrderType.EmptyDrink ||
+    activeDrinkType === OrderType.EmptyPlate;
 
   function toggleMenu() {
     setMenuOpen((prevMenuOpen) => !prevMenuOpen);
@@ -64,6 +73,28 @@ export default function CoffeeShop() {
     }
   }
 
+  function takeOrderFromCounter(orderId: string) {
+    if (!isEmpty) {
+      alert(
+        "Finish your current drink before pulling another one! (try tapping the drink)"
+      );
+      return;
+    }
+
+    const orderToDrink = orders.find((order) => order.id === orderId);
+    if (!orderToDrink) return; // should not happen
+    setOrders((prevOrders) =>
+      prevOrders.filter((order) => order.id !== orderId)
+    );
+    setActiveDrinkType(orderToDrink.type);
+  }
+
+  function finishActiveDrink() {
+    if (!isEmpty) {
+      setActiveDrinkType(OrderType.EmptyDrink);
+    }
+  }
+
   return (
     <>
       <div
@@ -78,12 +109,12 @@ export default function CoffeeShop() {
             <div className="counter-container">
               <div className="upcoming-orders">
                 {/* only ever show the upcoming 5 */}
-                {orders
-                  .slice(0, 5)
-                  .reverse()
-                  .map((order, i) => (
-                    <Americano />
-                  ))}
+                {orders.slice(0, 5).map((order, i) => (
+                  <DrinkOrder
+                    orderType={order.type}
+                    onClick={() => takeOrderFromCounter(order.id)}
+                  />
+                ))}
               </div>
               <div className="counter"></div>
             </div>
@@ -114,7 +145,10 @@ export default function CoffeeShop() {
                 )}
               </div>
               <div className="current-order">
-                <Americano />
+                <DrinkOrder
+                  orderType={activeDrinkType}
+                  onClick={() => finishActiveDrink()}
+                />
               </div>
             </div>
           </div>
