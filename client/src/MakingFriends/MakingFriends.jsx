@@ -50,12 +50,12 @@ export default function MakingFriends() {
 
   return (
     <div className="primary-content text-content making-friends-container">
+      <h3 className="">Chat with others</h3>
       <div>
         {clients.length === 1
           ? `${clients.length} person here! Welcome :)`
           : `${clients.length} people are here! Say hey to eachother`}
       </div>
-
       <div className="chat-box-container">
         <div className="chat-box">
           {chatMessages.map((chatMsg) => (
@@ -70,7 +70,6 @@ export default function MakingFriends() {
           <div id="anchor" />
         </div>
       </div>
-
       <form
         onSubmit={(e) => {
           e.preventDefault();
