@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./CoffeeShop.css";
 import DrinkOrder from "./DrinkOrder";
 import Star from "./star";
-import Anchor from "../components/LoadingGrid/Anchor/Anchor";
+import Anchor from "../components/Anchor/Anchor";
 import useDevice from "../hooks/useDevice";
 
 /**

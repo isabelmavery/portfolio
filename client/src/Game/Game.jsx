@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./Game.css";
 import Player from "./Player";
+import Button from "../components/Button/Button";
 
 function GrassBunch() {
   return (
@@ -46,13 +47,13 @@ export default function Game() {
   return (
     <div style={{ textAlign: "center" }}>
       <div className="game-container primary-content">
-        <button
+        <Button
           ref={buttonRef}
           className="game-start"
           onClick={handleToggleStart}
         >
           {isActive ? "Exit" : "Start"}{" "}
-        </button>
+        </Button>
         <Player ref={playerRef} />
         <BackGround isActive={isActive} />
       </div>

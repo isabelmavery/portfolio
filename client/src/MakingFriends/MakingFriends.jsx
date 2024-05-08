@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import useWebsocket from "../hooks/useWebsocket";
 import "./MakingFriends.css";
 import LoadingGrid from "../components/LoadingGrid/LoadingGrid";
+import Button from "../components/Button/Button";
 
 const getRandomColor = () => {
   return (
@@ -93,7 +94,7 @@ export default function MakingFriends() {
           }}
         />
 
-        <button type="submit">Send ➷‿➹⁀➷</button>
+        <Button type="submit">Send ➷‿➹⁀➷</Button>
       </form>
     </div>
   );

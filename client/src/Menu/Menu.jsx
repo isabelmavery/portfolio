@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { isabelsTopNav } from "./menuData";
 import "./Menu.css";
-import Anchor from "../components/LoadingGrid/Anchor/Anchor";
+import Anchor from "../components/Anchor/Anchor";
 import CuteBullet from "../assets/CuteBullet";
 
 function MenuItemHeader({ navItem, isFolder, isOpen, handleOpen }) {

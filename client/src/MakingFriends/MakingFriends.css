@@ -48,7 +48,8 @@
 }
 
 .making-friends-container form input {
-  width: 35%;
+  width: 40%;
+  font-size: 1rem;
 }
 
 @media screen and (max-width: 425px) {
