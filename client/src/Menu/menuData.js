@@ -6,6 +6,7 @@ export const isabelsTopNav = [
       {
         id: 2,
         value: "Traba",
+        isEnd: true,
         children: [
           {
             id: 9,
@@ -26,6 +27,7 @@ export const isabelsTopNav = [
       {
         id: 3,
         value: "Fanatics",
+        isEnd: true,
         children: [
           {
             id: 12,
@@ -48,6 +50,7 @@ export const isabelsTopNav = [
       {
         id: 4,
         value: "Cadence",
+        isEnd: true,
         children: [
           {
             id: 15,
@@ -66,6 +69,7 @@ export const isabelsTopNav = [
   {
     id: 5,
     value: "Contact me",
+    isEnd: true,
     children: [
       {
         id: 6,
@@ -84,6 +88,7 @@ export const isabelsTopNav = [
   {
     id: 7,
     value: "Projects",
+    isEnd: true,
     children: [
       {
         id: 8,

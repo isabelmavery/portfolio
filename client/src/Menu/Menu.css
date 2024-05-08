@@ -1,52 +1,62 @@
-.folder {
-    overflow: auto;
-    margin: 10px 10px 25px 10px;
+.expandable-menu {
+  overflow: auto;
+  margin: 10px 10px 25px 10px;
 }
 
-.folder button:hover {
-    background-color: var(--pretty-blue);
+.expandable-menu button:hover {
+  background-color: var(--pretty-blue);
 }
 
-.folder button:hover .menu-arrow {
-    border-color: white;
+.expandable-menu button:hover .menu-arrow {
+  border-color: white;
 }
 
-.folder button {
-    --button-size: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
+.expandable-menu button {
+  --button-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 
-    border: none;
-    border-radius: 50%;
-    margin: 4px 1px;
-    text-align: center;
-    height: var(--button-size);
-    width: var(--button-size);
+  border: none;
+  border-radius: 50%;
+  margin: 4px 1px;
+  text-align: center;
+  height: var(--button-size);
+  width: var(--button-size);
+}
+
+.last-children {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  background-color: var(--button-grey);
+  border-radius: 10px;
+  padding: 15px 10px;
+  margin: 10px 20px;
+  box-shadow: var(--basic-box-shadow);
 }
 
 .tree-item-child {
-    margin-left: 35px;
+  margin-left: 35px;
 }
 
 @media screen and (max-width: 425px) {
-    .folder button {
-        height: 35px;
-        width: 35px;
-    }
+  .expandable-menu button {
+    height: 35px;
+    width: 35px;
   }
-
+}
 
 .menu-arrow {
-    display: block;
-    width: 4px;
-    height: 4px;
-    border-bottom: 1px solid black;
-    border-right: 1px solid black;
-    transform: rotate(-45deg);
+  display: block;
+  width: 4px;
+  height: 4px;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  transform: rotate(-45deg);
 }
 
 .menu-arrow.open {
-    transform: rotate(45deg);
+  transform: rotate(45deg);
 }

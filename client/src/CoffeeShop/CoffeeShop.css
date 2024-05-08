@@ -96,7 +96,7 @@
 .coffee-shop-board button {
   background-color: var(--coffee-shop-red);
   border: 1px solid var(--coffee-shop-pink);
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  box-shadow: var(--basic-box-shadow);
   width: 164px;
   padding: 14px 5px;
 

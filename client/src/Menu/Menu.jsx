@@ -47,12 +47,15 @@ function MenuItem(props) {
           isOpen={isOpen}
           handleOpen={handleOpen}
         />
-        {isOpen &&
-          navItem.children.map((child, i) => (
-            <div className="tree-item-child" key={i}>
-              <MenuItem navItem={child} />
-            </div>
-          ))}
+        {isOpen && (
+          <div className={navItem.isEnd ? "last-children" : ""}>
+            {navItem.children.map((child, i) => (
+              <div className="tree-item-child" key={i}>
+                <MenuItem navItem={child} />
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     );
   }
@@ -64,7 +67,7 @@ function MenuItem(props) {
 
 export default function Menu() {
   return (
-    <div className="folder">
+    <div className="expandable-menu">
       {isabelsTopNav.map((navItem, i) => (
         <MenuItem navItem={navItem} key={`menu-${i}`} defaultIsOpen />
       ))}
