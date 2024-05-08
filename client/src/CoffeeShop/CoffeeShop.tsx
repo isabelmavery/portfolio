@@ -3,6 +3,7 @@ import "./CoffeeShop.css";
 import DrinkOrder from "./DrinkOrder";
 import Star from "./star";
 import Anchor from "../components/LoadingGrid/Anchor/Anchor";
+import useDevice from "../hooks/useDevice";
 
 /**
 Notion Planning doc and Figma here if you are curious! Side project since I spend so much time in coffee shops :) 
@@ -44,6 +45,9 @@ export default function CoffeeShop() {
   const [activeDrinkType, setActiveDrinkType] = useState(OrderType.EmptyPlate);
   const [orders, setOrders] = useState<Order[]>([]);
   const [menuOpen, setMenuOpen] = useState(false);
+  const { isMobile } = useDevice();
+  const numOrdersToShow = isMobile ? 3 : 5;
+
   const isEmpty =
     activeDrinkType === OrderType.EmptyDrink ||
     activeDrinkType === OrderType.EmptyPlate;
@@ -120,7 +124,7 @@ export default function CoffeeShop() {
               <div className="upcoming-orders">
                 {/* only ever show the upcoming 5 */}
                 {orders
-                  .slice(0, 5)
+                  .slice(0, numOrdersToShow)
                   .reverse()
                   .map((order) => (
                     <DrinkOrder
