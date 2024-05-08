@@ -99,9 +99,15 @@ export default function CoffeeShop() {
     <>
       <div
         className="primary-content justify-center"
-        style={{ padding: 10, fontStyle: "italic" }}
+        style={{ padding: 20, fontStyle: "italic", textAlign: "center" }}
       >
-        Work in progress...
+        <span>
+          Try ordering a drink from this mock cafe below! Work in progress
+          inspired by my nearly daily coffee shop visits :) See planning doc{" "}
+          <a href="https://quiet-fireman-c5b.notion.site/Practice-Design-Virtual-Coffee-Shop-b8a55929ef89459895d32a5004ca5ff2">
+            here
+          </a>
+        </span>
       </div>
       <div className="coffee-shop-container">
         <div className="coffee-shop-border">
@@ -109,12 +115,15 @@ export default function CoffeeShop() {
             <div className="counter-container">
               <div className="upcoming-orders">
                 {/* only ever show the upcoming 5 */}
-                {orders.slice(0, 5).map((order, i) => (
-                  <DrinkOrder
-                    orderType={order.type}
-                    onClick={() => takeOrderFromCounter(order.id)}
-                  />
-                ))}
+                {orders
+                  .slice(0, 5)
+                  .reverse()
+                  .map((order) => (
+                    <DrinkOrder
+                      orderType={order.type}
+                      onClick={() => takeOrderFromCounter(order.id)}
+                    />
+                  ))}
               </div>
               <div className="counter"></div>
             </div>

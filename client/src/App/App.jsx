@@ -21,10 +21,10 @@ export default function App() {
           <Link to="/about">About</Link>
         </div>
         <div className="menu-item">
-          <Link to="/fun">For Fun</Link>
+          <Link to="/cafe">Cafe</Link>
         </div>
         <div className="menu-item">
-          <Link to="/cafe">Cafe</Link>
+          <Link to="/fun">For Fun</Link>
         </div>
       </div>
 
