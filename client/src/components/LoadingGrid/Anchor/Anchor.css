@@ -1,0 +1,9 @@
+a.primary-link {
+  color: var(--pretty-purple);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+a.primary-link:hover {
+  text-decoration: underline;
+}

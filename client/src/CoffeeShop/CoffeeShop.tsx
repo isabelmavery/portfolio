@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./CoffeeShop.css";
 import DrinkOrder from "./DrinkOrder";
 import Star from "./star";
+import Anchor from "../components/LoadingGrid/Anchor/Anchor";
 
 /**
 Notion Planning doc and Figma here if you are curious! Side project since I spend so much time in coffee shops :) 
@@ -104,9 +105,12 @@ export default function CoffeeShop() {
         <span>
           Try ordering a drink from this mock cafe below! Work in progress
           inspired by my nearly daily coffee shop visits :) See planning doc{" "}
-          <a href="https://quiet-fireman-c5b.notion.site/Practice-Design-Virtual-Coffee-Shop-b8a55929ef89459895d32a5004ca5ff2">
+          <Anchor
+            ariaLabel="notion planning document"
+            href="https://quiet-fireman-c5b.notion.site/Practice-Design-Virtual-Coffee-Shop-b8a55929ef89459895d32a5004ca5ff2"
+          >
             here
-          </a>
+          </Anchor>
         </span>
       </div>
       <div className="coffee-shop-container">

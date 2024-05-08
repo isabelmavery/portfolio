@@ -11,16 +11,21 @@ export const isabelsTopNav = [
           {
             id: 9,
             value:
-              "Marketplace connecting workers with businesses in the light industrial and events space. Saw our team grow from two to eleven engineers and our app use grow from zero to > 40,000 users",
+              "Early eng at a marketplace connecting workers with businesses in the light industrial and events space. Saw our team grow from two to eleven engineers and our app use grow from zero to > 40,000 users",
           },
           {
             id: 10,
-            value: "Designed and implemented our invoicing system",
+            value: "Designed and implemented our automated invoicing system",
           },
           {
             id: 11,
             value:
-              "Owned automated invoicing cuts, automated late fees, in-portal payments flow etc.",
+              "Built out much of a business facing application to view worker flows, manage shift flows and edit timesheets",
+          },
+          {
+            id: 11,
+            value:
+              "Owned automated invoicing cuts, automated late fees, in-portal payments flow and more",
           },
         ],
       },
@@ -36,8 +41,7 @@ export const isabelsTopNav = [
           },
           {
             id: 13,
-            value:
-              "Dynamic navigation component feature to remove manual burden on business users and improve site performance",
+            value: "Dynamic navigation",
             link: "https://medium.com/fanatics-tech-blog/enabling-fans-to-discover-their-favorite-teams-gear-43da19801b1c",
           },
           {
@@ -67,39 +71,40 @@ export const isabelsTopNav = [
     ],
   },
   {
-    id: 5,
-    value: "Contact me",
+    id: 6,
+    value: "Projects",
     isEnd: true,
     children: [
       {
-        id: 6,
-        value: "Linked-In",
-        link: "https://www.linkedin.com/in/isabel-m-avery/",
+        id: 7,
+        link: "https://github.com/isabelmavery",
+        value:
+          "Github with code to a variety of projects including this one :)",
         children: [],
       },
       {
-        id: 6,
-        value: "isabelmavery@gmail.com",
-        link: "mailto:isabelmavery@gmail.com",
+        id: 8,
+        link: "https://medium.com/fanatics-tech-blog/enabling-fans-to-discover-their-favorite-teams-gear-43da19801b1c",
+        value: "Blog post, Building Dynamic Navigation",
         children: [],
       },
     ],
   },
   {
-    id: 7,
-    value: "Projects",
+    id: 9,
+    value: "Contact Me",
     isEnd: true,
     children: [
       {
-        id: 8,
-        link: "https://github.com/isabelmavery",
-        value: "https://github.com/isabelmavery",
+        id: 10,
+        value: "LinkedIn (a more complete resume)",
+        link: "https://www.linkedin.com/in/isabel-m-avery/",
         children: [],
       },
       {
-        id: 9,
-        link: "https://medium.com/fanatics-tech-blog/enabling-fans-to-discover-their-favorite-teams-gear-43da19801b1c",
-        value: "Building Dynamic Navigation",
+        id: 11,
+        value: "Send me an email",
+        link: "mailto:isabelmavery@gmail.com",
         children: [],
       },
     ],

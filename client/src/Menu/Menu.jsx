@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { isabelsTopNav } from "./menuData";
 import "./Menu.css";
+import Anchor from "../components/LoadingGrid/Anchor/Anchor";
 
 function MenuItemHeader({ navItem, isFolder, isOpen, handleOpen }) {
   const isLink = !!navItem.link;
@@ -20,9 +21,13 @@ function MenuItemHeader({ navItem, isFolder, isOpen, handleOpen }) {
         "-"
       )}
       {isLink ? (
-        <a key={`${navItem.id}`} href={navItem.link}>
+        <Anchor
+          key={`${navItem.id}`}
+          href={navItem.link}
+          ariaLabel={navItem.value}
+        >
           {navItem.value}
-        </a>
+        </Anchor>
       ) : (
         <div key={`${navItem.id}`}>{navItem.value}</div>
       )}
