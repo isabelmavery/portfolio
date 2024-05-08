@@ -30,10 +30,10 @@ export default function App() {
 
       <div className="content-container">
         <Routes>
-          <Route path="/about" element={<About />} />
-          <Route path="/fun" element={<ForFun />} />
-          <Route path="/cafe" element={<CoffeeShop />} />
-          <Route path="/" element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="fun" element={<ForFun />} />
+          <Route path="cafe" element={<CoffeeShop />} />
+          <Route path="" element={<Home />} />
         </Routes>
       </div>
 
