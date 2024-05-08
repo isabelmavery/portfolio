@@ -174,4 +174,8 @@
   .upcoming-orders .drink-order:nth-last-child(n + 4) {
     display: none;
   }
+  /* hide current balance on mobile until functional and placed in a better spot */
+  .current-balance {
+    display: none;
+  }
 }
