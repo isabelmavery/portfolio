@@ -3,6 +3,19 @@
   margin: 10px 10px 25px 10px;
 }
 
+/* For Header Buttons */
+.expandable-menu button .menu-arrow {
+  border-color: var(--pretty-purple);
+}
+
+.expandable-menu button.open {
+  background-color: var(--pretty-purple);
+}
+
+.expandable-menu button.open .menu-arrow {
+  border-color: white;
+}
+
 .expandable-menu button:hover {
   background-color: var(--pretty-blue);
 }
@@ -26,10 +39,24 @@
   width: var(--button-size);
 }
 
+.menu-arrow {
+  display: block;
+  width: 4px;
+  height: 4px;
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
+  transform: rotate(-45deg);
+}
+
+.menu-arrow.open {
+  transform: rotate(45deg);
+}
+
+/* For Menu Items */
 .last-children {
   display: flex;
   flex-direction: column;
-  gap: 9px;
+  gap: 14px;
   background-color: var(--button-grey);
   border-radius: 10px;
   padding: 15px 10px;
@@ -41,22 +68,27 @@
   margin-left: 35px;
 }
 
+.last-children .tree-item-child {
+  margin-left: 0;
+}
+
 @media screen and (max-width: 425px) {
   .expandable-menu button {
     height: 35px;
     width: 35px;
   }
-}
 
-.menu-arrow {
-  display: block;
-  width: 4px;
-  height: 4px;
-  border-bottom: 1px solid black;
-  border-right: 1px solid black;
-  transform: rotate(-45deg);
-}
+  .last-children {
+    padding: 20px 10px;
+    margin: 13px 0px;
+  }
 
-.menu-arrow.open {
-  transform: rotate(45deg);
+  .tree-item-child {
+    margin-left: 0;
+  }
+
+  .menu-arrow {
+    width: 6px;
+    height: 6px;
+  }
 }

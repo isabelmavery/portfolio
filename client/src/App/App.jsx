@@ -24,7 +24,7 @@ export default function App() {
           <Link to="/cafe">Cafe</Link>
         </div>
         <div className="menu-item">
-          <Link to="/fun">For Fun</Link>
+          <Link to="/fun">More..</Link>
         </div>
       </div>
 

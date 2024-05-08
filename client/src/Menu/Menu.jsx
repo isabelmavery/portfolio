@@ -2,6 +2,7 @@ import { useState } from "react";
 import { isabelsTopNav } from "./menuData";
 import "./Menu.css";
 import Anchor from "../components/LoadingGrid/Anchor/Anchor";
+import CuteBullet from "../assets/CuteBullet";
 
 function MenuItemHeader({ navItem, isFolder, isOpen, handleOpen }) {
   const isLink = !!navItem.link;
@@ -14,11 +15,11 @@ function MenuItemHeader({ navItem, isFolder, isOpen, handleOpen }) {
       }}
     >
       {isFolder ? (
-        <button onClick={handleOpen}>
+        <button onClick={handleOpen} className={isOpen ? "open" : ""}>
           <div className={isOpen ? "menu-arrow open" : "menu-arrow"} />
         </button>
       ) : (
-        "-"
+        <CuteBullet />
       )}
       {isLink ? (
         <Anchor

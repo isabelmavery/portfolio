@@ -7,10 +7,10 @@ export default function Tea() {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g filter="url(#filter0_d_15_108)">
+      <g filter="url(#filter0_d_18_2)">
         <ellipse cx="115" cy="122.5" rx="111" ry="50.5" fill="#D0DFE4" />
       </g>
-      <g filter="url(#filter1_i_15_108)">
+      <g filter="url(#filter1_i_18_2)">
         <ellipse cx="115" cy="118.5" rx="69" ry="31.5" fill="#D0DFE4" />
       </g>
       <path
@@ -19,12 +19,12 @@ export default function Tea() {
         stroke="#DBD9D9"
         stroke-width="2"
       />
-      <g filter="url(#filter2_f_15_108)">
+      <g filter="url(#filter2_f_18_2)">
         <ellipse cx="114" cy="66.5" rx="62.5" ry="20.5" fill="white" />
       </g>
       <path
         d="M141.246 40.4289C141.246 40.4289 143.284 43.1138 142.558 41.7768C141.401 40.5 140.042 39.2632 138.481 38.0664C136.556 36.9676 134.471 35.9256 132.227 34.9404C129.72 34.0814 127.112 33.2904 124.404 32.5673C121.559 31.9863 118.681 31.4778 115.771 31.0418C112.865 30.7499 109.998 30.5279 107.169 30.3758C104.485 30.3557 101.907 30.3961 99.4347 30.497C97.2341 30.7048 95.1962 30.9578 93.321 31.2559C91.8171 31.6255 90.517 32.0204 89.4209 32.4408C88.7592 32.8901 88.3227 33.3426 88.1113 33.7982C88.355 34.2374 88.823 34.6572 89.5153 35.0576C90.6389 35.3979 91.964 35.6981 93.4907 35.9584C95.3825 36.1206 97.4333 36.226 99.6432 36.2747C102.116 36.1971 104.691 36.0516 107.366 35.8381C110.177 35.4825 113.02 35.0544 115.897 34.5539C118.769 33.9092 121.603 33.1947 124.398 32.4102C127.048 31.4937 129.592 30.5168 132.03 29.4794C134.197 28.335 136.201 27.1454 138.043 25.9107C139.513 24.6046 140.779 23.2731 141.841 21.9162C142.469 20.5303 142.872 19.1413 143.05 17.7491C142.772 16.3733 142.27 15.017 141.544 13.68C140.387 12.4031 139.028 11.1663 137.467 9.96955C135.542 8.87079 133.457 7.82877 131.214 6.84353C128.707 5.98455 126.099 5.1935 123.39 4.4704C120.545 3.88945 117.667 3.38097 114.757 2.94494C111.851 2.65305 110.456 2.4699 107.626 2.3178C104.943 2.2977 105.964 2.34475 103.492 2.44563C101.291 2.65345 109.867 2.13087 107.991 2.429"
-        stroke="url(#paint0_linear_15_108)"
+        stroke="url(#paint0_linear_18_2)"
         stroke-opacity="0.45"
         stroke-width="4"
       />
@@ -40,11 +40,11 @@ export default function Tea() {
       />
       <path
         d="M167 66C167 74.2843 143.271 81 114 81C84.7289 81 61 74.2843 61 66C61 57.7157 84.7289 51 114 51C143.271 51 167 57.7157 167 66Z"
-        fill="url(#paint1_linear_15_108)"
+        fill="url(#paint1_linear_18_2)"
       />
       <defs>
         <filter
-          id="filter0_d_15_108"
+          id="filter0_d_18_2"
           x="0"
           y="72"
           width="230"
@@ -69,17 +69,17 @@ export default function Tea() {
           <feBlend
             mode="normal"
             in2="BackgroundImageFix"
-            result="effect1_dropShadow_15_108"
+            result="effect1_dropShadow_18_2"
           />
           <feBlend
             mode="normal"
             in="SourceGraphic"
-            in2="effect1_dropShadow_15_108"
+            in2="effect1_dropShadow_18_2"
             result="shape"
           />
         </filter>
         <filter
-          id="filter1_i_15_108"
+          id="filter1_i_18_2"
           x="46"
           y="87"
           width="138"
@@ -110,11 +110,11 @@ export default function Tea() {
           <feBlend
             mode="normal"
             in2="shape"
-            result="effect1_innerShadow_15_108"
+            result="effect1_innerShadow_18_2"
           />
         </filter>
         <filter
-          id="filter2_f_15_108"
+          id="filter2_f_18_2"
           x="47.5"
           y="42"
           width="133"
@@ -131,11 +131,11 @@ export default function Tea() {
           />
           <feGaussianBlur
             stdDeviation="2"
-            result="effect1_foregroundBlur_15_108"
+            result="effect1_foregroundBlur_18_2"
           />
         </filter>
         <linearGradient
-          id="paint0_linear_15_108"
+          id="paint0_linear_18_2"
           x1="114.716"
           y1="1.81066"
           x2="117.354"
@@ -146,7 +146,7 @@ export default function Tea() {
           <stop offset="0.415" stop-color="white" stop-opacity="0.82" />
         </linearGradient>
         <linearGradient
-          id="paint1_linear_15_108"
+          id="paint1_linear_18_2"
           x1="114"
           y1="51"
           x2="114"

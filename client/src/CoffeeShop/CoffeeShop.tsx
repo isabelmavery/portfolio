@@ -139,23 +139,25 @@ export default function CoffeeShop() {
                   <Star>{" ∞ "}</Star>
                 </div>
 
-                <button onClick={toggleMenu}>What would you like?</button>
-                {menuOpen && (
-                  <div className="menu">
-                    <button onClick={() => createOrder(OrderType.Cortado)}>
-                      <span>{OrderType.Cortado}</span>{" "}
-                      <span>{OrderPrice[OrderType.Cortado]}</span>
-                    </button>
-                    <button onClick={() => createOrder(OrderType.Americano)}>
-                      <span>{OrderType.Americano}</span>{" "}
-                      <span>{OrderPrice[OrderType.Americano]}</span>
-                    </button>
-                    <button onClick={() => createOrder(OrderType.Tea)}>
-                      <span>{OrderType.Tea}</span>{" "}
-                      <span>{OrderPrice[OrderType.Tea]}</span>
-                    </button>
-                  </div>
-                )}
+                <div className="menu-wrapper">
+                  <button onClick={toggleMenu}>What would you like?</button>
+                  {menuOpen && (
+                    <div className="menu">
+                      <button onClick={() => createOrder(OrderType.Cortado)}>
+                        <span>{OrderType.Cortado}</span>{" "}
+                        <span>{OrderPrice[OrderType.Cortado]}</span>
+                      </button>
+                      <button onClick={() => createOrder(OrderType.Americano)}>
+                        <span>{OrderType.Americano}</span>{" "}
+                        <span>{OrderPrice[OrderType.Americano]}</span>
+                      </button>
+                      <button onClick={() => createOrder(OrderType.Tea)}>
+                        <span>{OrderType.Tea}</span>{" "}
+                        <span>{OrderPrice[OrderType.Tea]}</span>
+                      </button>
+                    </div>
+                  )}
+                </div>
               </div>
               <div className="current-order">
                 <DrinkOrder

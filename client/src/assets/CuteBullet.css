@@ -1,0 +1,7 @@
+.cute-bullet svg {
+  width: 30px;
+  height: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
