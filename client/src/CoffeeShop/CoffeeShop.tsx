@@ -43,7 +43,16 @@ type Order = {
 
 export default function CoffeeShop() {
   const [activeDrinkType, setActiveDrinkType] = useState(OrderType.EmptyPlate);
-  const [orders, setOrders] = useState<Order[]>([]);
+  const [orders, setOrders] = useState<Order[]>([
+    {
+      id: crypto.randomUUID(),
+      type: OrderType.Tea,
+      createdAt: new Date(),
+      userId: "userId_TO_DO",
+      status: OrderStatus.BeingMade,
+      payment: OrderPrice[OrderType.Tea],
+    },
+  ]);
   const [menuOpen, setMenuOpen] = useState(false);
   const { isMobile } = useDevice();
   const numOrdersToShow = isMobile ? 3 : 5;
@@ -161,7 +170,7 @@ export default function CoffeeShop() {
             </div>
 
             {/* Counter */}
-            <div className="counter-container">
+            <div className="upcoming-orders-container">
               <div className="upcoming-orders">
                 {/* only ever show the upcoming 5 */}
                 {orders
@@ -174,7 +183,17 @@ export default function CoffeeShop() {
                     />
                   ))}
               </div>
+              <div className="counter-base"></div>
               <div className="counter"></div>
+            </div>
+
+            <div
+              className="justify-center"
+              style={{
+                color: `var(--coffee-shop-red)`,
+              }}
+            >
+              Pick up your order here
             </div>
           </div>
         </div>

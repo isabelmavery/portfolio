@@ -11,7 +11,6 @@
   --coffee-shop-light-brown: #a64b00;
 
   background-color: var(--coffee-shop-brown);
-  height: 406px;
   width: 486px;
   display: flex;
   justify-content: center;
@@ -22,12 +21,15 @@
 }
 
 .coffee-shop-background {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
   background-color: var(--coffee-shop-beige);
   margin: 20px;
   padding: 22px;
 }
 
-.counter-container {
+.upcoming-orders-container {
   background-color: var(--coffee-shop-brown);
   height: 118px;
   display: flex;
@@ -35,6 +37,7 @@
   justify-content: flex-end;
   padding: 0px 12px;
   margin-top: 10px;
+  border-radius: 4px;
 }
 
 .upcoming-orders {
@@ -42,7 +45,7 @@
   display: flex;
   justify-content: flex-end;
   gap: 15px;
-  margin-bottom: 10px;
+  margin-bottom: 19px;
   padding: 0px 15px;
 }
 
@@ -54,8 +57,17 @@
 .counter {
   background-color: var(--coffee-shop-light-brown);
   height: 16px;
+  width: 100%;
+  margin-top: -32px;
+  margin-bottom: 24px;
+  box-shadow: var(--basic-box-shadow);
+}
 
-  margin-bottom: 12px;
+.counter-base {
+  background-color: var(--coffee-shop-light-brown);
+  height: 16px;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .coffee-shop-border .bottom {
@@ -74,7 +86,6 @@
   margin-top: 12px;
   margin-bottom: 12px;
   height: 120px;
-  width: 120px;
 
   display: flex;
   justify-content: center;
