@@ -15,16 +15,16 @@ export default function App() {
     <Router>
       <div className="top-nav">
         <div className="menu-item">
-          <Link to="/">Home</Link>
+          <Link to="">Home</Link>
         </div>
         <div className="menu-item">
-          <Link to="/about">About</Link>
+          <Link to="about">About</Link>
         </div>
         <div className="menu-item">
-          <Link to="/cafe">Cafe</Link>
+          <Link to="cafe">Cafe</Link>
         </div>
         <div className="menu-item">
-          <Link to="/fun">More..</Link>
+          <Link to="fun">More..</Link>
         </div>
       </div>
 
