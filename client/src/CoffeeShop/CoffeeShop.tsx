@@ -120,29 +120,9 @@ export default function CoffeeShop() {
       <div className="coffee-shop-container">
         <div className="coffee-shop-border">
           <div className="coffee-shop-background">
-            <div className="counter-container">
-              <div className="upcoming-orders">
-                {/* only ever show the upcoming 5 */}
-                {orders
-                  .slice(0, numOrdersToShow)
-                  .reverse()
-                  .map((order) => (
-                    <DrinkOrder
-                      orderType={order.type}
-                      onClick={() => takeOrderFromCounter(order.id)}
-                    />
-                  ))}
-              </div>
-              <div className="counter"></div>
-            </div>
             <div className="bottom">
+              {/* Menu / Board */}
               <div className="coffee-shop-board">
-                <div className="current-balance">
-                  <span>Your </span>
-                  <span>Balance</span>
-                  <Star>{" ∞ "}</Star>
-                </div>
-
                 <div className="menu-wrapper">
                   <button onClick={toggleMenu}>What would you like?</button>
                   {menuOpen && (
@@ -162,13 +142,37 @@ export default function CoffeeShop() {
                     </div>
                   )}
                 </div>
+                <div className="current-balance">
+                  <span>Your </span>
+                  <span>Balance</span>
+                  <Star>{" ∞ "}</Star>
+                </div>
               </div>
+
+              {/* Current Drink */}
               <div className="current-order">
                 <DrinkOrder
                   orderType={activeDrinkType}
                   onClick={() => finishActiveDrink()}
                 />
               </div>
+            </div>
+
+            {/* Counter */}
+            <div className="counter-container">
+              <div className="upcoming-orders">
+                {/* only ever show the upcoming 5 */}
+                {orders
+                  .slice(0, numOrdersToShow)
+                  .reverse()
+                  .map((order) => (
+                    <DrinkOrder
+                      orderType={order.type}
+                      onClick={() => takeOrderFromCounter(order.id)}
+                    />
+                  ))}
+              </div>
+              <div className="counter"></div>
             </div>
           </div>
         </div>

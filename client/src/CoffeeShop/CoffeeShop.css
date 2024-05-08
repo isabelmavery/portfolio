@@ -34,6 +34,7 @@
   flex-direction: column;
   justify-content: flex-end;
   padding: 0px 12px;
+  margin-top: 10px;
 }
 
 .upcoming-orders {
@@ -70,7 +71,7 @@
 
 .coffee-shop-board .current-balance {
   background-color: var(--coffee-shop-pink);
-  margin-top: 20px;
+  margin-top: 12px;
   margin-bottom: 12px;
   height: 120px;
   width: 120px;
@@ -97,7 +98,7 @@
 .coffee-shop-board button {
   background-color: var(--coffee-shop-red);
   border: 1px solid var(--coffee-shop-pink);
-  box-shadow: var(--basic-box-shadow);
+  box-shadow: var(--shadow-elevation-medium);
   width: 164px;
   padding: 14px 5px;
 
@@ -113,6 +114,7 @@
 
 .coffee-shop-board .menu {
   position: absolute;
+  z-index: 1;
 }
 
 .coffee-shop-board .menu button {
