@@ -70,7 +70,9 @@ export default function CoffeeShop() {
       };
 
       setOrders((prevOrders) => [...prevOrders, newOrder]);
-      alert(`Woo, one ${orderType} added to the queue!`);
+      alert(
+        `Woo, one ${orderType} added to the queue! Keep an eye out on the counter below to see when your order is ready!`
+      );
       toggleMenu();
       // reduce balance
     } catch (error) {
@@ -124,7 +126,7 @@ export default function CoffeeShop() {
               {/* Menu / Board */}
               <div className="coffee-shop-board">
                 <div className="menu-wrapper">
-                  <button onClick={toggleMenu}>What would you like?</button>
+                  <button onClick={toggleMenu}>Order here!</button>
                   {menuOpen && (
                     <div className="menu">
                       <button onClick={() => createOrder(OrderType.Cortado)}>
