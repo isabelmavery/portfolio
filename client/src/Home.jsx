@@ -23,14 +23,13 @@ function Home() {
             fontSize: "1.2rem",
           }}
         >
-          <div className="header">Hey there!</div>
+          <div className="header">Hey there</div>
           <Wave />
-          <div>I'm Isabel</div>
         </div>
         <div>
-          Welcome to my personal website. I put this together to share a bit
-          more about me and create a home for my side projects outside of work
-          :)
+          Welcome to my personal website! My name is Isabel and I am a Fullstack
+          engineer originally from the Chicago area. Here you can take a look at
+          a few fun projects I've developed outside of work
         </div>
       </div>
       <div className="text-content primary-content">
