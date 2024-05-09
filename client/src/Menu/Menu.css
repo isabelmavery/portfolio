@@ -1,6 +1,9 @@
 .expandable-menu {
   overflow: auto;
   margin: 10px 10px 25px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
 
 /* For Header Buttons */
@@ -73,6 +76,10 @@
 }
 
 @media screen and (max-width: 425px) {
+  .expandable-menu {
+    gap: 18px;
+  }
+
   .expandable-menu button {
     height: 35px;
     width: 35px;

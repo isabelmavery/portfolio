@@ -2,6 +2,7 @@
   --charcoal: #36454f;
   --button-grey: #efefef;
   --black: black;
+  --pretty-black: #1a1b1f;
   --grey: #8a8a8a;
   --pretty-blue: #89badf;
   --pretty-purple: #7297d6;
@@ -16,6 +17,7 @@
   --basic-box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px;
 
   font-family: monospace;
+  color: var(--pretty-black);
 
   /* credit - https://www.joshwcomeau.com/shadow-palette/ */
   --shadow-color: 24deg 28% 44%;
