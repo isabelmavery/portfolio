@@ -92,7 +92,7 @@ export const isabelsTopNav = [
   },
   {
     id: 9,
-    value: "Contact Me",
+    value: "Want to reach out?",
     isEnd: true,
     children: [
       {
