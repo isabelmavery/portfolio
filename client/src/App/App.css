@@ -44,7 +44,7 @@ html,
 #root {
   height: 100dvh;
   font-size: 1rem;
-  background-color: var(--basic-box-shadow);
+  background-color: var(--primary-background-color);
 }
 
 @media screen and (max-width: 425px) {
