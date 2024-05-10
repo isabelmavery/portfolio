@@ -1,7 +1,7 @@
 export const isabelsTopNav = [
   {
     id: 1,
-    value: "My Work Experience",
+    value: "Work Experience",
     children: [
       {
         id: 2,

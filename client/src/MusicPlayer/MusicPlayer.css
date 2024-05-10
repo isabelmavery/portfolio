@@ -1,68 +1,57 @@
 .music-container {
-    /* Align with center of menu buttons */
-    margin-left: 16px;
-    margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 
 @media screen and (max-width: 425px) {
-    .music-container {
-        margin-left: 21px;
-    }
+  .music-container {
+    display: none;
+  }
 }
 
 .play-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    box-shadow: var(--basic-box-shadow);
-    height: 45px;
-    width: 45px;
-    border-radius: 100%;
-    background-color: white;
-    border: 4px solid var(--pretty-blue);
+  box-shadow: var(--basic-box-shadow);
+  height: 35px;
+  width: 35px;
+  border-radius: 100%;
+  background-color: white;
+  border: 4px solid var(--pretty-purple);
 }
 
 button.music {
-    --button-size: 40px;
+  --button-size: 33px;
 
-    display: flex;
-    background-color: var(--pretty-blue);
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    text-align: center;
-    height: var(--button-size);
-    width: var(--button-size);
-    border-radius: 100%;
-    border: 1px solid var(--button-grey);
-
+  display: flex;
+  background-color: var(--pretty-purple);
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-align: center;
+  height: var(--button-size);
+  width: var(--button-size);
+  border-radius: 100%;
+  border: 1px solid var(--button-grey);
 }
 
-
 .play-container:hover {
-   border: 4px solid var(--pretty-purple)
-   
+  border: 4px solid var(--pretty-blue);
 }
 
 .play-container:hover button.music {
-    background-color: var(--pretty-purple);
+  background-color: var(--pretty-blue);
 }
 
 button.music svg {
-    fill: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 20px;
-}
-
-.vibration {
-    display: none;
-    height: 30px;
-    width: 30px;
-    border-radius: 100%;
-    border: 4px solid var(--pretty-purple);
-    border-color: transparent  var(--pretty-purple) transparent transparent;
-    transform: rotate(-45deg);
+  fill: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
 }

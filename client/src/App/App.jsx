@@ -9,7 +9,6 @@ import About from "../About/About";
 import MusicPlayer from "../MusicPlayer/MusicPlayer";
 import ForFun from "../Pages/ForFun";
 import CoffeeShop from "../CoffeeShop/CoffeeShop";
-import Divider from "../Divider/Divider";
 import MultiColorDivider from "../Divider/MultiColorDivider";
 
 export default function App() {
@@ -28,6 +27,7 @@ export default function App() {
         <div className="menu-item">
           <Link to="fun">More..</Link>
         </div>
+        <MusicPlayer />
       </div>
 
       <div className="content-container">
