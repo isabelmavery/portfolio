@@ -1,0 +1,17 @@
+@keyframes flow {
+  0% {
+    margin-left: -1600px;
+  }
+  100% {
+    margin-left: 0;
+  }
+}
+
+.multi-divider {
+  animation: flow 10s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
+}
+.multi-divider:hover {
+  animation-play-state: running;
+}

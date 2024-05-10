@@ -9,6 +9,8 @@ import About from "../About/About";
 import MusicPlayer from "../MusicPlayer/MusicPlayer";
 import ForFun from "../Pages/ForFun";
 import CoffeeShop from "../CoffeeShop/CoffeeShop";
+import Divider from "../Divider/Divider";
+import MultiColorDivider from "../Divider/MultiColorDivider";
 
 export default function App() {
   return (
@@ -38,7 +40,8 @@ export default function App() {
       </div>
 
       <div className="bottom-bar">
-        <MusicPlayer />
+        <MultiColorDivider />
+        {/* <MusicPlayer /> */}
         <Footer />
       </div>
     </Router>
