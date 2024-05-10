@@ -65,6 +65,7 @@ html,
   justify-content: flex-start;
   align-items: flex-start;
   background-color: var(--pretty-blue);
+  box-shadow: var(--basic-box-shadow);
 }
 
 .content-container {

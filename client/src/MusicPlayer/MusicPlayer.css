@@ -2,7 +2,7 @@
   --main-color: var(--pretty-purple);
   --hover-color: var(--pretty-blue);
   margin-left: auto;
-  margin-right: 1rem;
+  margin-right: 1.1rem;
   display: flex;
   align-items: center;
   height: 100%;
@@ -24,7 +24,7 @@
   width: 36px;
   border-radius: 100%;
   background-color: white;
-  border: 4px solid var(--hover-color);
+  border: 3px solid var(--hover-color);
 }
 
 button.music {
@@ -43,7 +43,7 @@ button.music {
 }
 
 .play-container:hover {
-  border: 4px solid var(--hover-color);
+  border: 3px solid var(--hover-color);
 }
 
 .play-container:hover button.music {

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { isabelsTopNav } from "./menuData";
+import isabelsResume from "./menuData";
 import "./Menu.css";
 import Anchor from "../components/Anchor/Anchor";
 import CuteBullet from "../assets/CuteBullet";
@@ -74,7 +74,7 @@ function MenuItem(props) {
 export default function Menu() {
   return (
     <div className="expandable-menu">
-      {isabelsTopNav.map((navItem, i) => (
+      {isabelsResume.map((navItem, i) => (
         <MenuItem navItem={navItem} key={`menu-${i}`} defaultIsOpen />
       ))}
     </div>

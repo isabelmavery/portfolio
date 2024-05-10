@@ -1,4 +1,4 @@
-export const isabelsTopNav = [
+export default [
   {
     id: 1,
     value: "Work Experience",
