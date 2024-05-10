@@ -80,11 +80,13 @@ html,
 }
 
 .menu-item {
+  width: 64px;
+  text-align: center;
   padding: 10px;
   border: 2px solid var(--pretty-blue);
   background-color: var(--pretty-purple);
   border-radius: 30px;
-  margin: 8px;
+  margin: 11px 5px;
   margin-right: -2px;
   box-shadow: var(--basic-box-shadow);
 }
