@@ -78,8 +78,7 @@ export const isabelsTopNav = [
       {
         id: 7,
         link: "https://github.com/isabelmavery",
-        value:
-          "Github with code to a variety of projects including this one :)",
+        value: "Github with code to a variety of projects including this one!",
         children: [],
       },
       {
