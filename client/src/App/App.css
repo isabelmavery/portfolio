@@ -44,7 +44,7 @@ html,
 #root {
   height: 100dvh;
   font-size: 1rem;
-  background-color: var(--primary-background-color);
+  background-color: var(--basic-box-shadow);
 }
 
 @media screen and (max-width: 425px) {
@@ -65,7 +65,7 @@ html,
   justify-content: flex-start;
   align-items: flex-start;
   background-color: var(--pretty-blue);
-  box-shadow: var(--basic-box-shadow);
+  box-shadow: var(--shadow-elevation-low);
 }
 
 .content-container {
@@ -80,13 +80,11 @@ html,
 }
 
 .menu-item {
-  width: 64px;
-  text-align: center;
   padding: 10px;
   border: 2px solid var(--pretty-blue);
   background-color: var(--pretty-purple);
   border-radius: 30px;
-  margin: 10px 5px;
+  margin: 8px;
   margin-right: -2px;
   box-shadow: var(--basic-box-shadow);
 }
