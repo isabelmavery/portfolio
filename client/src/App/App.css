@@ -84,7 +84,7 @@ html,
   border: 2px solid var(--pretty-blue);
   background-color: var(--pretty-purple);
   border-radius: 30px;
-  margin: 8px;
+  margin: 9px 8px;
   margin-right: -2px;
   box-shadow: var(--basic-box-shadow);
 }

@@ -29,7 +29,7 @@ function Home() {
         <div>
           Welcome to my personal website! My name is Isabel and I am a Fullstack
           engineer originally from the Chicago area. Explore to learn more about
-          my background and try out some projects I had fun with :)
+          my background and try out some projects I had fun with
         </div>
       </div>
       <div className="text-content primary-content">
