@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 import { Link, BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
@@ -10,8 +10,10 @@ import MusicPlayer from "../MusicPlayer/MusicPlayer";
 import ForFun from "../Pages/ForFun";
 import CoffeeShop from "../CoffeeShop/CoffeeShop";
 import MultiColorDivider from "../Divider/MultiColorDivider";
+import useDB from "../hooks/useDB";
 
 export default function App() {
+  // const { data } = useDB("users");
   return (
     <Router>
       <div className="top-nav">

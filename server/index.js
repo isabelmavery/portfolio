@@ -1,9 +1,19 @@
+import "dotenv/config";
+import express from "express";
 import WebSocket, { WebSocketServer } from "ws";
-const wsServer = new WebSocketServer({ port: 5001 });
+import cors from "cors";
+import sql from "./db.js";
 
-console.log("Server initialized");
+const app = express();
+app.use(cors());
 
-// broadcast update to all connected / subscribed clients
+const httpServer = app.listen(process.env.SERVER_PORT, () => {
+  console.log(`Server running at http://localhost:${process.env.SERVER_PORT}`);
+});
+
+const wsServer = new WebSocketServer({ server: httpServer });
+
+// Broadcast updates to all connected / subscribed clients
 const updateClients = ({ ws, clients, update, includeSelf }) => {
   for (let client of clients) {
     if (
@@ -53,3 +63,25 @@ wsServer.on("connection", function connection(ws) {
     });
   });
 });
+
+async function getUsers() {
+  const users = await sql`
+    select *
+    from users
+  `;
+  console.log("users from db", users);
+  return users;
+}
+
+/** Routes*/
+
+app.get("/users", async (req, res) => {
+  try {
+    const users = await getUsers();
+    res.send(users);
+  } catch (error) {
+    res.send(error);
+  }
+});
+
+export default app;
