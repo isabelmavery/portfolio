@@ -1,8 +1,8 @@
-# Simple Website
+# Simple Potfolio
 
 Simple portfolio by Isabel, created on github codespaces
 
-Hosted on render: https://portfolio-web-app-wdtc.onrender.com/
+Hosted on render, access at: https://isabelavery.com/ or https://portfolio-web-app-wdtc.onrender.com/
 
 ### Implementation Details
 
@@ -46,3 +46,9 @@ For any audio files
 - [ ] extend game to have points / barriers
 - [ ] add dates to resume in --pretty-purple
 - [ ] potentially put all tabs on one page
+
+<!-- ### Deployment
+
+This section has moved here: [https://vitejs.dev/guide/build.html](https://vitejs.dev/guide/build.html) -->
+
+Spring 2024
