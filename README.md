@@ -2,7 +2,7 @@
 
 Simple website by Isabel, created on github codespaces
 
-Hosted on render: https://portfolio-web-app-wdtc.onrender.com/
+Hosted on render, access at: https://isabelavery.com/ or https://portfolio-web-app-wdtc.onrender.com/
 
 To Dos:
 
