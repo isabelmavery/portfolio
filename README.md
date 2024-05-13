@@ -1,6 +1,6 @@
-# Simple Website
+# Simple Potfolio 
 
-Simple website by Isabel, created on github codespaces
+Simple portfolio website by Isabel, created on github codespaces
 
 Hosted on render, access at: https://isabelavery.com/ or https://portfolio-web-app-wdtc.onrender.com/
 
@@ -14,3 +14,5 @@ To Dos:
 <!-- ### Deployment
 
 This section has moved here: [https://vitejs.dev/guide/build.html](https://vitejs.dev/guide/build.html) -->
+
+Spring 2024
