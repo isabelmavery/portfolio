@@ -1,6 +1,6 @@
-import About from "./About/About";
-import Menu from "./Menu/Menu";
-import Wave from "./assets/Wave";
+import About from "../About/About";
+import Menu from "../../components/Menu/Menu";
+import Wave from "../../assets/Wave";
 
 function Home() {
   return (

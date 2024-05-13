@@ -3,14 +3,14 @@ import React, { useState, useEffect } from "react";
 import { Link, BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import "./App.css";
-import Home from "../Home";
 import Footer from "./Footer";
-import About from "../About/About";
-import MusicPlayer from "../MusicPlayer/MusicPlayer";
-import ForFun from "../Pages/ForFun";
-import CoffeeShop from "../CoffeeShop/CoffeeShop";
-import MultiColorDivider from "../Divider/MultiColorDivider";
-import useDB from "../hooks/useDB";
+import Home from "../pages/Home/Home";
+import About from "../pages/About/About";
+import MusicPlayer from "../components/MusicPlayer/MusicPlayer";
+import ForFun from "../pages/ForFun/ForFun";
+import CoffeeShop from "../pages/CoffeeShop/CoffeeShop";
+import MultiColorDivider from "../base-components/Divider/MultiColorDivider";
+// import useDB from "../hooks/useDB";
 
 export default function App() {
   // const { data } = useDB("users");

@@ -2,8 +2,8 @@ import { useState } from "react";
 import "./CoffeeShop.css";
 import DrinkOrder from "./DrinkOrder";
 import Star from "./star";
-import Anchor from "../components/Anchor/Anchor";
-import useDevice from "../hooks/useDevice";
+import Anchor from "../../base-components/Anchor/Anchor";
+import useDevice from "../../hooks/useDevice";
 
 /**
 Notion Planning doc and Figma here if you are curious! Side project since I spend so much time in coffee shops :) 

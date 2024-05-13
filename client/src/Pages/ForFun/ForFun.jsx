@@ -1,5 +1,5 @@
-import Game from "../Game/Game";
-import MakingFriends from "../MakingFriends/MakingFriends";
+import Game from "../../components/Game/Game";
+import MakingFriends from "../../components/MakingFriends/MakingFriends";
 import "./ForFun.css";
 
 export default function ForFun() {

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import useWebsocket from "../hooks/useWebsocket";
+import useWebsocket from "../../hooks/useWebsocket";
 import "./MakingFriends.css";
-import LoadingGrid from "../components/LoadingGrid/LoadingGrid";
-import Button from "../components/Button/Button";
+import LoadingGrid from "../../base-components/LoadingGrid/LoadingGrid";
+import Button from "../../base-components/Button/Button";
 
 const getRandomColor = () => {
   return (

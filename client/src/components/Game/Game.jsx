@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./Game.css";
 import Player from "./Player";
-import Button from "../components/Button/Button";
+import Button from "../../base-components/Button/Button";
 
 function GrassBunch() {
   return (
