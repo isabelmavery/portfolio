@@ -1,8 +1,10 @@
-# Simple Potfolio
+# Isabel's Portfolio
 
-Simple portfolio by Isabel, created on github codespaces
+Portfolio with React and Typescript Client (as well as some Javascript pending cleanup) as well as a Node, Express, Postgres simple server.
 
-Hosted on render, access at: https://isabelavery.com/ or https://portfolio-web-app-wdtc.onrender.com/
+Hosted on render, view me at [isabelavery.com](https://isabelavery.com/)!
+
+---
 
 ### Implementation Details
 
@@ -12,31 +14,31 @@ Hosted on render, access at: https://isabelavery.com/ or https://portfolio-web-a
 /pages
 ```
 
-Wrappers for each primary tab or page on the website
+- Wrappers for each primary tab or page on the website
 
 ```
 /base-components
 ```
 
-The home for widely re-usable, simple react components (anchor, button)
+- The home for widely re-usable, simple react components (anchor, button)
 
 ```
 /components
 ```
 
-The home for largely specific, context based react components (coffee shop, game )
+- The home for largely specific, context based react components (coffee shop, game )
 
 ```
 /hooks
 ```
 
-For custom react hooks
+- For custom react hooks
 
 ```
 /sounds
 ```
 
-For any audio files
+- For any audio files
 
 </br>
 
@@ -46,9 +48,3 @@ For any audio files
 - [ ] extend game to have points / barriers
 - [ ] add dates to resume in --pretty-purple
 - [ ] potentially put all tabs on one page
-
-<!-- ### Deployment
-
-This section has moved here: [https://vitejs.dev/guide/build.html](https://vitejs.dev/guide/build.html) -->
-
-Spring 2024
