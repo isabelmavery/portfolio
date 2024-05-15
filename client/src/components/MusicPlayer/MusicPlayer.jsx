@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useSound } from "use-sound";
-import spanishGuitar from "../sounds/spanish_guitar_loop.mp3";
+import spanishGuitar from "../../sounds/spanish_guitar_loop.mp3";
 import "./MusicPlayer.css";
 
 export default function MusicPlayer() {
