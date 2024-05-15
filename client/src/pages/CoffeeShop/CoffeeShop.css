@@ -1,0 +1,182 @@
+.coffee-shop-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.coffee-shop-border {
+  --coffee-shop-brown: #ad6a1d;
+  --coffee-shop-beige: #d5b39c;
+  --coffee-shop-pink: #b3736c;
+  --coffee-shop-red: #712d29;
+  --coffee-shop-light-brown: #a64b00;
+
+  background-color: var(--coffee-shop-brown);
+  width: 486px;
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.coffee-shop-background {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  background-color: var(--coffee-shop-beige);
+  margin: 20px;
+  padding: 22px;
+}
+
+.upcoming-orders-container {
+  background-color: var(--coffee-shop-brown);
+  height: 118px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0px 12px;
+  margin-top: 10px;
+  border-radius: 4px;
+}
+
+.upcoming-orders {
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-bottom: 19px;
+  padding: 0px 15px;
+}
+
+.upcoming-orders svg {
+  width: 60px;
+  height: 60px;
+}
+
+.counter {
+  background-color: var(--coffee-shop-light-brown);
+  height: 16px;
+  width: 100%;
+  margin-top: -32px;
+  margin-bottom: 24px;
+  box-shadow: var(--basic-box-shadow);
+}
+
+.counter-base {
+  background-color: var(--coffee-shop-light-brown);
+  height: 16px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.coffee-shop-border .bottom {
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+}
+
+.coffee-shop-board {
+  display: flex;
+  flex-direction: column;
+}
+
+.coffee-shop-board .current-balance {
+  background-color: var(--coffee-shop-pink);
+  margin-top: 12px;
+  margin-bottom: 12px;
+  height: 120px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 5px 0px;
+}
+
+.star {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.star .balance-value {
+  position: absolute;
+  margin-top: 10px;
+}
+
+.coffee-shop-board button {
+  background-color: var(--coffee-shop-red);
+  border: 1px solid var(--coffee-shop-pink);
+  box-shadow: var(--shadow-elevation-medium);
+  width: 164px;
+  padding: 14px 5px;
+
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+
+.coffee-shop-board button:hover {
+  filter: brightness(110%);
+}
+
+.coffee-shop-board .menu {
+  position: absolute;
+  z-index: 1;
+}
+
+.coffee-shop-board .menu button {
+  background-color: var(--coffee-shop-pink);
+  border: 1px solid var(--coffee-shop-red);
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 15px;
+}
+
+.current-order {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  margin-top: 18px;
+  width: 230px;
+  height: 188px;
+}
+
+@media screen and (max-width: 425px) {
+  .coffee-shop-border {
+    height: 100%;
+    width: 100%;
+  }
+  .coffee-shop-border .bottom {
+    flex-direction: column;
+  }
+  .coffee-shop-board {
+    align-items: center;
+  }
+  .coffee-shop-board .current-balance {
+    width: 100%;
+  }
+  .coffee-shop-board .menu-wrapper,
+  .coffee-shop-board button {
+    width: 100%;
+  }
+  .coffee-shop-board .menu button {
+    min-width: 180px;
+  }
+  .upcoming-orders {
+    gap: 10px;
+    padding: 0px 6px;
+  }
+  /* only show oldest three orders in mobile */
+  .upcoming-orders .drink-order:nth-last-child(n + 4) {
+    display: none;
+  }
+  /* hide current balance on mobile until functional and placed in a better spot */
+  .current-balance {
+    display: none;
+  }
+}
