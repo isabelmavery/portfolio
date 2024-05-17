@@ -6,6 +6,7 @@ import sql from "./db.js";
 
 const app = express();
 app.use(cors());
+app.use(express.json());
 
 const httpServer = app.listen(process.env.SERVER_PORT, () => {
   console.log(`Server running at http://localhost:${process.env.SERVER_PORT}`);
@@ -73,13 +74,32 @@ async function getUsers() {
   return users;
 }
 
-/** Routes*/
+async function createUser({ name, balance }) {
+  const id = crypto.randomUUID();
+  const createdAt = Date.now();
+  await sql`
+    INSERT INTO users (id, name, balance, created_at)
+    VALUES (${id}, ${name}, ${balance}, ${createdAt})
+  `;
+  return { id, name, balance, createdAt };
+}
 
+/** Routes*/
 app.get("/users", async (req, res) => {
   try {
     const users = await getUsers();
     res.send(users);
   } catch (error) {
+    res.send(error);
+  }
+});
+
+app.post("/users", async (req, res) => {
+  try {
+    const newUser = await createUser(req.body);
+    res.send(newUser);
+  } catch (error) {
+    console.log("error", error);
     res.send(error);
   }
 });
