@@ -70,7 +70,15 @@ async function getUsers() {
     select *
     from users
   `;
-  console.log("users from db", users);
+  return users;
+}
+
+async function getUserById(id) {
+  const users = await sql`
+  select *
+  from users
+  where id = ${id}
+`;
   return users;
 }
 
@@ -84,6 +92,21 @@ async function createUser({ name, balance }) {
   return { id, name, balance, createdAt };
 }
 
+async function updateUser(id, body) {
+  const { name, balance } = body;
+  if (name) {
+    await sql`
+    UPDATE users SET name = '${name}' WHERE id = ${id};
+  `;
+  }
+  if (balance) {
+    await sql`
+    UPDATE users SET balance = ${balance} WHERE id = ${id};
+  `;
+  }
+  return { id, name, balance };
+}
+
 /** Routes*/
 app.get("/users", async (req, res) => {
   try {
@@ -94,10 +117,29 @@ app.get("/users", async (req, res) => {
   }
 });
 
+app.get("/users/:id", async (req, res) => {
+  try {
+    const user = await getUserById(req.params.id);
+    res.send(user);
+  } catch (error) {
+    res.send(error);
+  }
+});
+
 app.post("/users", async (req, res) => {
   try {
     const newUser = await createUser(req.body);
     res.send(newUser);
+  } catch (error) {
+    console.log("error", error);
+    res.send(error);
+  }
+});
+
+app.put("/users/:id", async (req, res) => {
+  try {
+    const user = await updateUser(req.params.id, req.body);
+    res.send(user);
   } catch (error) {
     console.log("error", error);
     res.send(error);
