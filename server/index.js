@@ -2,9 +2,10 @@ import "dotenv/config";
 import express from "express";
 import WebSocket, { WebSocketServer } from "ws";
 import cors from "cors";
-import sql from "./db.js";
+import { getUserById, getUsers, updateUser, createUser } from "./user/apis.js";
 
 const app = express();
+
 app.use(cors());
 app.use(express.json());
 
@@ -65,50 +66,8 @@ wsServer.on("connection", function connection(ws) {
   });
 });
 
-async function getUsers() {
-  const users = await sql`
-    select *
-    from users
-  `;
-  return users;
-}
-
-async function getUserById(id) {
-  const users = await sql`
-  select *
-  from users
-  where id = ${id}
-`;
-  return users;
-}
-
-async function createUser({ name, balance }) {
-  const id = crypto.randomUUID();
-  const createdAt = Date.now();
-  await sql`
-    INSERT INTO users (id, name, balance, created_at)
-    VALUES (${id}, ${name}, ${balance}, ${createdAt})
-  `;
-  return { id, name, balance, createdAt };
-}
-
-async function updateUser(id, body) {
-  const { name, balance } = body;
-  if (name) {
-    await sql`
-    UPDATE users SET name = '${name}' WHERE id = ${id};
-  `;
-  }
-  if (balance) {
-    await sql`
-    UPDATE users SET balance = ${balance} WHERE id = ${id};
-  `;
-  }
-  return { id, name, balance };
-}
-
 /** Routes*/
-app.get("/users", async (req, res) => {
+app.get("/users", async (_, res) => {
   try {
     const users = await getUsers();
     res.send(users);
