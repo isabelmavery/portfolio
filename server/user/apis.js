@@ -1,4 +1,4 @@
-import sql from "./db.js";
+import sql from "../db";
 
 export async function getUsers() {
   const users = await sql`
