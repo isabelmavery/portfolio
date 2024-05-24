@@ -9,7 +9,7 @@ export default function Footer(props) {
         marginTop: 20,
       }}
     >
-      &copy; Isabel Avery
+      {BUILD_DATE} &copy; Isabel Avery
     </footer>
   );
 }

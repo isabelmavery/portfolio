@@ -6,6 +6,11 @@ export default defineConfig({
   plugins: [react()],
   test: {
     globals: true,
-    environment: 'jsdom',
+    environment: "jsdom",
   },
-})
+  define: {
+    BUILD_DATE: JSON.stringify(
+      new Date().toLocaleDateString("en-US", { month: "long", year: "numeric" })
+    ),
+  },
+});
