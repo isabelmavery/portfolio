@@ -8,6 +8,7 @@ function MenuItemHeader({ navItem, isFolder, isOpen, handleOpen }) {
   const isLink = !!navItem.link;
   return (
     <div
+      className="menu-item-header"
       style={{
         display: "flex",
         gap: 8,
@@ -30,7 +31,16 @@ function MenuItemHeader({ navItem, isFolder, isOpen, handleOpen }) {
           {navItem.value}
         </Anchor>
       ) : (
-        <div key={`${navItem.id}`}>{navItem.value}</div>
+        <div
+          className="menu-item-wrapper"
+          onClick={handleOpen}
+          style={{ cursor: isFolder ? "pointer" : "" }}
+        >
+          <div key={`${navItem.id}`}>{navItem.value}</div>
+          {navItem.secondaryValue && (
+            <div className="secondary-value">{navItem.secondaryValue}</div>
+          )}
+        </div>
       )}
     </div>
   );

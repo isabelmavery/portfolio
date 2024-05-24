@@ -6,7 +6,7 @@ export default [
       {
         id: 2,
         value: "Traba",
-        secondaryValue: "2021-2023",
+        secondaryValue: "2021 - 2023",
         isEnd: true,
         children: [
           {
@@ -33,7 +33,7 @@ export default [
       {
         id: 3,
         value: "Fanatics",
-        secondaryValue: "2018-2021",
+        secondaryValue: "2018 - 2021",
         isEnd: true,
         children: [
           {

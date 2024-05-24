@@ -6,6 +6,17 @@
   gap: 14px;
 }
 
+.menu-item-header .secondary-value {
+  display: none;
+}
+
+.menu-item-header:hover .secondary-value {
+  display: inline-block;
+  color: var(--pretty-purple-dark);
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
 /* For Header Buttons */
 .expandable-menu button .menu-arrow {
   border-color: var(--pretty-purple);
@@ -40,12 +51,14 @@
   text-align: center;
   height: var(--button-size);
   width: var(--button-size);
+  min-width: var(--button-size);
 }
 
 .menu-arrow {
   display: block;
   width: 4px;
   height: 4px;
+  min-width: 4px;
   border-bottom: 2px solid black;
   border-right: 2px solid black;
   transform: rotate(-45deg);
@@ -53,6 +66,13 @@
 
 .menu-arrow.open {
   transform: rotate(45deg);
+}
+
+/* menu-item-wrapper */
+.menu-item-wrapper {
+  display: flex;
+  gap: 15px;
+  align-items: center;
 }
 
 /* For Menu Items */
@@ -83,6 +103,7 @@
   .expandable-menu button {
     height: 35px;
     width: 35px;
+    min-width: 35px;
   }
 
   .last-children {
@@ -96,6 +117,7 @@
 
   .menu-arrow {
     width: 6px;
+    min-width: 6px;
     height: 6px;
   }
 }
