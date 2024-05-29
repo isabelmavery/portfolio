@@ -2,18 +2,24 @@ import "dotenv/config";
 import express from "express";
 import WebSocket, { WebSocketServer } from "ws";
 import cors from "cors";
-import { getUserById, getUsers, updateUser, createUser } from "./user/apis.js";
+import routes from "./routes/index.ts";
+
+declare class CustomWebSocket extends WebSocket {
+  uid: string;
+}
 
 const app = express();
-
 app.use(cors());
 app.use(express.json());
 
 const httpServer = app.listen(process.env.SERVER_PORT, () => {
   console.log(`Server running at http://localhost:${process.env.SERVER_PORT}`);
+  routes(app);
 });
 
-const wsServer = new WebSocketServer({ server: httpServer });
+const wsServer = new WebSocketServer<typeof CustomWebSocket>({
+  server: httpServer,
+});
 
 // Broadcast updates to all connected / subscribed clients
 const updateClients = ({ ws, clients, update, includeSelf }) => {
@@ -27,7 +33,7 @@ const updateClients = ({ ws, clients, update, includeSelf }) => {
   }
 };
 
-wsServer.on("connection", function connection(ws) {
+wsServer.on("connection", function connection(ws: CustomWebSocket) {
   ws.uid = crypto.randomUUID();
   ws.send(JSON.stringify({ type: "uid", uid: ws.uid }));
 
@@ -52,7 +58,7 @@ wsServer.on("connection", function connection(ws) {
   });
 
   ws.on("close", () => {
-    console.log("disconnnected");
+    console.log("disconnnected from ws");
 
     updateClients({
       ws,
@@ -64,45 +70,6 @@ wsServer.on("connection", function connection(ws) {
       includeSelf: true,
     });
   });
-});
-
-/** Routes*/
-app.get("/users", async (_, res) => {
-  try {
-    const users = await getUsers();
-    res.send(users);
-  } catch (error) {
-    res.send(error);
-  }
-});
-
-app.get("/users/:id", async (req, res) => {
-  try {
-    const user = await getUserById(req.params.id);
-    res.send(user);
-  } catch (error) {
-    res.send(error);
-  }
-});
-
-app.post("/users", async (req, res) => {
-  try {
-    const newUser = await createUser(req.body);
-    res.send(newUser);
-  } catch (error) {
-    console.log("error", error);
-    res.send(error);
-  }
-});
-
-app.put("/users/:id", async (req, res) => {
-  try {
-    const user = await updateUser(req.params.id, req.body);
-    res.send(user);
-  } catch (error) {
-    console.log("error", error);
-    res.send(error);
-  }
 });
 
 export default app;
