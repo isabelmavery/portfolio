@@ -5,17 +5,19 @@ import "./Modal.css";
 /**
  * Simple Modal Component using React Portal. Places Modal at document body.
  */
-const ESC_KEY = 27;
+const ESC_KEY = "Escape";
+
 function ModalContent(props: {
   closeModal: () => void;
   renderModalContent: (closeModal: () => void) => ReactNode;
 }) {
   const { renderModalContent, closeModal } = props;
-  const handleKeyDown = (e) => {
-    if (e.keyCode === ESC_KEY) {
+  const handleKeyDown = (e: KeyboardEvent) => {
+    if (e.code === ESC_KEY) {
       closeModal();
     }
   };
+
   useEffect(() => {
     document.addEventListener("keydown", handleKeyDown);
     return () => document.removeEventListener("keydown", handleKeyDown);

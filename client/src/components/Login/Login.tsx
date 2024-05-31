@@ -1,13 +1,10 @@
 import { useState } from "react";
 import { postHelper } from "../../apis";
-import useToken from "../../hooks/useToken";
 import LoadingGrid from "../../base-components/LoadingGrid/LoadingGrid";
 import "./Login.css";
 
-export default function Login() {
-  console.log("rendering login component!!!!");
-
-  const { token, saveToken } = useToken();
+export default function Login(props: { saveToken: (id: string) => void }) {
+  const { saveToken } = props;
   const [user, setUser] = useState<any>(null); // todo pull user by default via token and set in context or s.t.
 
   const [email, setEmail] = useState<string>("");
@@ -36,16 +33,9 @@ export default function Login() {
     }
   };
 
-  if (token) {
-    return (
-      <div className="primary-content text-content">
-        <h3>Welcome {user?.name} :)</h3> <p> You are logged in!</p>
-      </div>
-    );
-  }
-
   return (
-    <div className="primary-content text-content login-content">
+    <div>
+      <h3>Login to your account</h3>
       {loading ? (
         <LoadingGrid />
       ) : error ? (
@@ -54,7 +44,7 @@ export default function Login() {
           <p>{error}</p>
         </>
       ) : (
-        <form onSubmit={handleLogin}>
+        <form onSubmit={handleLogin} id="loginForm">
           <label htmlFor="email">Email:</label>
           <input
             type="email"
@@ -67,7 +57,9 @@ export default function Login() {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          <button type="submit">Login</button>
+          <button form="loginForm" type="submit" value="Submit">
+            Login
+          </button>
         </form>
       )}
     </div>

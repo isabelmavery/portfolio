@@ -1,11 +1,10 @@
 import { useState } from "react";
 import { postHelper } from "../../apis";
-import useToken from "../../hooks/useToken";
 import LoadingGrid from "../../base-components/LoadingGrid/LoadingGrid";
 import "./Register.css";
 
-export default function Register() {
-  const { token, saveToken } = useToken();
+export default function Register(props: { saveToken: (id: string) => void }) {
+  const { saveToken } = props;
   const [user, setUser] = useState<any>(null); // todo pull user by default via token and set in context or s.t.
 
   const [name, setName] = useState<string>("");
@@ -40,16 +39,8 @@ export default function Register() {
     }
   };
 
-  if (token) {
-    return (
-      <div className="primary-content text-content">
-        <h3>Welcome {user?.name} :)</h3> <p> You are logged in!</p>
-      </div>
-    );
-  }
-
   return (
-    <div className="primary-content text-content register-content">
+    <div>
       <h3>Create an account!</h3>
       {loading ? (
         <LoadingGrid />
@@ -59,7 +50,7 @@ export default function Register() {
           <p>{error}</p>
         </>
       ) : (
-        <form onSubmit={handleRegister}>
+        <form onSubmit={handleRegister} id="registerForm">
           <label htmlFor="name">Your Name:</label>
           <input
             type="text"
@@ -78,7 +69,9 @@ export default function Register() {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          <button type="submit">Submit</button>
+          <button form="registerForm" type="submit" value="Submit">
+            Submit
+          </button>
         </form>
       )}
     </div>

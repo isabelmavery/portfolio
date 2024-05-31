@@ -13,6 +13,7 @@ import MultiColorDivider from "../base-components/Divider/MultiColorDivider";
 import Modal from "../base-components/Modal/Modal";
 import Person from "../assets/Person";
 import Login from "../components/Login/Login";
+import LoginOrRegister from "../components/LoginOrRegister.tsx/LoginOrRegister";
 // import useDB from "../hooks/useDB";
 
 export default function App() {
@@ -32,11 +33,11 @@ export default function App() {
         <div className="menu-item">
           <Link to="fun">More..</Link>
         </div>
-
-        {/* <Modal
-          renderModalContent={() => <Login />}
+        {/* 
+        <Modal
+          renderModalContent={() => <LoginOrRegister />}
           ctaContent={
-            <div className="menu-item login-cta">
+            <div className="menu-item login-register-cta">
               <Person />
             </div>
           }

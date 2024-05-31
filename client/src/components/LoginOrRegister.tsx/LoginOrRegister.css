@@ -1,0 +1,37 @@
+.login-register-content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 40px 25px;
+}
+
+.login-register-content form {
+  display: flex;
+  flex-direction: column;
+  margin: 24px 0;
+  gap: 8px;
+}
+
+.login-register-content button,
+.login-register-content input {
+  font-size: 1rem;
+}
+
+.toggle-login-wrapper {
+  display: flex;
+}
+
+button.toggle-login {
+  font-size: 1rem;
+  color: var(--pretty-purple-dark);
+  font-weight: bold;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-style: italic;
+}
+
+button.toggle-login:hover {
+  text-decoration: underline;
+}
