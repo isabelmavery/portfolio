@@ -1,0 +1,26 @@
+.modal-content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 1000;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgb(74, 112, 144, 0.3);
+}
+
+.modal-content {
+  width: 300px;
+}
+
+/* let button be customizable */
+button.modal-cta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  border: none;
+  padding: 0;
+}

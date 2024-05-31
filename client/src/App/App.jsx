@@ -10,6 +10,9 @@ import MusicPlayer from "../components/MusicPlayer/MusicPlayer";
 import ForFun from "../pages/ForFun/ForFun";
 import CoffeeShop from "../pages/CoffeeShop/CoffeeShop";
 import MultiColorDivider from "../base-components/Divider/MultiColorDivider";
+import Modal from "../base-components/Modal/Modal";
+import Person from "../assets/Person";
+import Login from "../components/Login/Login";
 // import useDB from "../hooks/useDB";
 
 export default function App() {
@@ -29,6 +32,15 @@ export default function App() {
         <div className="menu-item">
           <Link to="fun">More..</Link>
         </div>
+
+        {/* <Modal
+          renderModalContent={() => <Login />}
+          ctaContent={
+            <div className="menu-item login-cta">
+              <Person />
+            </div>
+          }
+        /> */}
         <MusicPlayer />
       </div>
 
@@ -43,7 +55,6 @@ export default function App() {
 
       <div className="bottom-bar">
         <MultiColorDivider />
-        {/* <MusicPlayer /> */}
         <Footer />
       </div>
     </Router>

@@ -1,6 +1,8 @@
 import About from "../About/About";
 import Menu from "../../components/Menu/Menu";
 import Wave from "../../assets/Wave";
+import Login from "../../components/Login/Login";
+import Register from "../../components/Register/Register";
 
 function Home() {
   return (
