@@ -18,7 +18,7 @@ export default function Login(props: { saveToken: (id: string) => void }) {
       e.preventDefault();
       setLoading(true);
 
-      const user = await postHelper("users/login", { email, password });
+      const user = await postHelper("users/login/", { email, password });
       if (!user || !user?.id) {
         throw new Error("No account was found with these credentials");
       }

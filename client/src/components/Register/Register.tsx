@@ -19,7 +19,7 @@ export default function Register(props: { saveToken: (id: string) => void }) {
       e.preventDefault();
       setLoading(true);
 
-      const newUser = await postHelper("users/register", {
+      const newUser = await postHelper("users/register/", {
         name,
         email,
         password,
