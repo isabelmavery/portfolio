@@ -15,20 +15,6 @@ import Person from "../assets/Person";
 import LoginOrRegister from "../components/LoginOrRegister.tsx/LoginOrRegister";
 // import useDB from "../hooks/useDB";
 
-const VITE_SERVER_URL = import.meta.env.VITE_SERVER_URL;
-
-/**
- * Using the free version of render so the node server spins down every 15 min, for now just pinging node server on app load.
- * Eventually will set up a CRON to ping it regularly or pay for upgrade.
- */
-async function pingNodeServer() {
-  try {
-    await fetch(VITE_SERVER_URL);
-  } catch (e) {
-    console.log("Error pinging server", e);
-  }
-}
-
 export default function App() {
   // const { data } = useDB("users");
 

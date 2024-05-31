@@ -4,6 +4,7 @@ const VITE_SERVER_URL = import.meta.env.VITE_SERVER_URL;
 export async function postHelper(path: string, body: any) {
   const res = await fetch(`${VITE_SERVER_URL}${path}`, {
     method: "POST",
+    mode: "cors",
     headers: {
       "Content-Type": "application/json",
     },

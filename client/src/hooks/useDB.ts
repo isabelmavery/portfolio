@@ -11,6 +11,7 @@ export default function useDB<T>(path: string) {
       setLoading(true);
       const res = await fetch(`${VITE_SERVER_URL}${path}`, {
         method: "get",
+        mode: "cors",
       });
       const result = await res.json();
       console.log("result", result);
