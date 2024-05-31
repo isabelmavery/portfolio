@@ -3,6 +3,7 @@
   justify-content: center;
   flex-direction: column;
   padding: 40px 25px;
+  border: 6px solid var(--pretty-blue);
 }
 
 .login-register-content form {
