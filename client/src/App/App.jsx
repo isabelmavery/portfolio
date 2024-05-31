@@ -18,10 +18,6 @@ import LoginOrRegister from "../components/LoginOrRegister.tsx/LoginOrRegister";
 export default function App() {
   // const { data } = useDB("users");
 
-  useEffect(() => {
-    pingNodeServer();
-  }, []);
-
   return (
     <Router>
       <div className="top-nav">
