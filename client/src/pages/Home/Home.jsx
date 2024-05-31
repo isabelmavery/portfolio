@@ -35,7 +35,6 @@ function Home() {
       <div className="text-content primary-content">
         <Menu />
       </div>
-      <LoginOrRegister />
     </>
   );
 }
