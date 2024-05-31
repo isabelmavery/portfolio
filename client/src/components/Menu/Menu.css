@@ -10,7 +10,8 @@
   display: none;
 }
 
-.menu-item-header:hover .secondary-value {
+.menu-item-header:hover .secondary-value,
+.menu-item-header .secondary-value.open {
   display: inline-block;
   color: var(--pretty-purple-dark);
   font-size: 0.9rem;

@@ -38,7 +38,11 @@ function MenuItemHeader({ navItem, isFolder, isOpen, handleOpen }) {
         >
           <div key={`${navItem.id}`}>{navItem.value}</div>
           {navItem.secondaryValue && (
-            <div className="secondary-value">{navItem.secondaryValue}</div>
+            <div
+              className={isOpen ? "open secondary-value" : "secondary-value"}
+            >
+              {navItem.secondaryValue}
+            </div>
           )}
         </div>
       )}
