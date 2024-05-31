@@ -1,5 +1,6 @@
 import Menu from "../../components/Menu/Menu";
 import Wave from "../../assets/Wave";
+import LoginOrRegister from "../../components/LoginOrRegister.tsx/LoginOrRegister";
 
 function Home() {
   return (
@@ -34,6 +35,7 @@ function Home() {
       <div className="text-content primary-content">
         <Menu />
       </div>
+      <LoginOrRegister />
     </>
   );
 }

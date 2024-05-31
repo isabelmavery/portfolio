@@ -53,18 +53,21 @@ export default function Register(props: { saveToken: (id: string) => void }) {
         <form onSubmit={handleRegister} id="registerForm">
           <label htmlFor="name">Your Name:</label>
           <input
+            required
             type="text"
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
           <label htmlFor="email">Email:</label>
           <input
+            required
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
           <label htmlFor="email">Password:</label>
           <input
+            required
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}

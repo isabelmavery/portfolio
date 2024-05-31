@@ -33,7 +33,7 @@ export default function App() {
         <div className="menu-item">
           <Link to="fun">More..</Link>
         </div>
-        {/* 
+
         <Modal
           renderModalContent={() => <LoginOrRegister />}
           ctaContent={
@@ -41,7 +41,7 @@ export default function App() {
               <Person />
             </div>
           }
-        /> */}
+        />
         <MusicPlayer />
       </div>
 

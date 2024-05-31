@@ -12,6 +12,7 @@ function ModalContent(props: {
   renderModalContent: (closeModal: () => void) => ReactNode;
 }) {
   const { renderModalContent, closeModal } = props;
+
   const handleKeyDown = (e: KeyboardEvent) => {
     if (e.code === ESC_KEY) {
       closeModal();
@@ -27,7 +28,7 @@ function ModalContent(props: {
     <div
       className="modal-content-wrapper"
       onClick={(e) => {
-        e.preventDefault();
+        // only close modal when clicking on outside wrapper
         if (e.target === e.currentTarget) {
           closeModal();
         }

@@ -47,12 +47,14 @@ export default function Login(props: { saveToken: (id: string) => void }) {
         <form onSubmit={handleLogin} id="loginForm">
           <label htmlFor="email">Email:</label>
           <input
+            required
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
           <label htmlFor="email">Password:</label>
           <input
+            required
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
