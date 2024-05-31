@@ -34,14 +34,14 @@ export default function App() {
           <Link to="fun">More..</Link>
         </div>
 
-        {/* <Modal
+        <Modal
           renderModalContent={() => <LoginOrRegister />}
           ctaContent={
             <div className="menu-item login-register-cta">
               <Person />
             </div>
           }
-        /> */}
+        />
 
         <MusicPlayer />
       </div>

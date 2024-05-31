@@ -50,6 +50,10 @@ export default function LoginOrRegister() {
           </span>
         )}
       </div>
+      <p style={{ fontStyle: "italic", fontSize: 13 }}>
+        Note, there isn't much to do with your account yet but fun things are
+        coming :){" "}
+      </p>
     </div>
   );
 }

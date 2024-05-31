@@ -45,10 +45,10 @@ export default function Register(props: { saveToken: (id: string) => void }) {
       {loading ? (
         <LoadingGrid />
       ) : error ? (
-        <>
+        <div style={{ margin: "40px 0px" }}>
           <h4>There was an issue loading your account</h4>
           <p>{error}</p>
-        </>
+        </div>
       ) : (
         <form onSubmit={handleRegister} id="registerForm">
           <label htmlFor="name">Your Name:</label>

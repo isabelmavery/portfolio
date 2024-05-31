@@ -39,10 +39,10 @@ export default function Login(props: { saveToken: (id: string) => void }) {
       {loading ? (
         <LoadingGrid />
       ) : error ? (
-        <>
+        <div style={{ margin: "40px 0px" }}>
           <h4>There was an issue loading your account</h4>
           <p>{error}</p>
-        </>
+        </div>
       ) : (
         <form onSubmit={handleLogin} id="loginForm">
           <label htmlFor="email">Email:</label>
