@@ -1,7 +1,8 @@
-import React, { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 import "./Game.css";
 import Player from "./Player";
 import Button from "../../base-components/Button/Button";
+import useGame from "../../hooks/useGame";
 
 function GrassBunch() {
   return (
@@ -28,6 +29,7 @@ export default function Game() {
   const [isActive, setIsActive] = useState(false);
   const playerRef = useRef(null);
   const buttonRef = useRef(null);
+  const { startGame, endGame, currentScore } = useGame();
 
   useEffect(() => {
     // initialize with focus on start button to allow access via keys
@@ -38,15 +40,18 @@ export default function Game() {
     if (isActive) {
       setIsActive(false);
       playerRef.current.blur();
+      endGame();
     } else {
       setIsActive(true);
       playerRef.current.focus();
+      startGame();
     }
   };
 
   return (
     <div style={{ textAlign: "center" }}>
       <div className="game-container primary-content">
+        <h4>Your Score: {currentScore}</h4>
         <Button
           ref={buttonRef}
           className="game-start"
