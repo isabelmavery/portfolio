@@ -3,6 +3,23 @@ export default [
     id: 1,
     value: "Work Experience",
     children: [
+        {
+        id: 44,
+        value: "Flowhub",
+        secondaryValue: "2024 - ",
+        isEnd: true,
+        children: [
+          {
+            id: 33,
+            value:
+              "Senior Software Engineer II at a mid sized startup helping to build out our brand new Ecomm platform.",
+          },
+          {
+            id: 34,
+            value: "React, Remix, Node, Golang, Postgres",
+          }
+        ],
+      },
       {
         id: 2,
         value: "Traba",

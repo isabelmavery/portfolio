@@ -36,7 +36,7 @@ export default function About() {
         <div>
           I am from the chicago area originally (Evanston) and love a lot of
           things outside of work, though they seem to change from month to
-          month. Right now I'm very into yoga, Chappel Roan and Neil Gaimen but
+          month. Right now I'm very into yoga, Chappel Roan and Elif Batuman but
           that could change by {monthName} :)
         </div>
       </div>
