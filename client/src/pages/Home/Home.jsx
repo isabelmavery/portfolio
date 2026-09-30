@@ -41,14 +41,13 @@ function Home() {
       <div className="text-content home-intro">
         <div className="home-intro-text">
           <div className="home-intro-header">
-            <div className="header">Hey there</div>
+            <h1 className="header">Hey there, I'm Isabel</h1>
             <Wave />
           </div>
           <div className="home-intro-description">
-            Welcome to my personal website! My name is Isabel and I am a
-            Fullstack engineer originally from the Chicago area. Explore to
-            learn more about my background and try out some projects I had fun
-            with.
+            Welcome to my website! I'm a senior full-stack engineer originally from the Chicago area, with 8+ years of experience
+            building payments and e-commerce products. 
+            Explore to learn more about my background, and take a look at a few projects I built for fun.
           </div>
           <div className="home-contact-links">
             {CONTACT_LINKS.map(({ label, href, download }) => (

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import isabelsResume from "./menuData";
 import "./Menu.css";
 import Anchor from "../../base-components/Anchor/Anchor";
@@ -6,6 +7,8 @@ import CuteBullet from "../../assets/CuteBullet";
 
 function MenuItemHeader({ navItem, isFolder, isOpen, handleOpen }) {
   const isLink = !!navItem.link;
+  const isInternalLink =
+    isLink && navItem.link.startsWith("/") && !navItem.download;
   return (
     <div
       className="menu-item-header"
@@ -22,7 +25,12 @@ function MenuItemHeader({ navItem, isFolder, isOpen, handleOpen }) {
       ) : (
         <CuteBullet />
       )}
-      {isLink ? (
+      {isInternalLink ? (
+        // client-side navigation so the music player keeps playing
+        <Link className="primary-link" to={navItem.link}>
+          {navItem.value}
+        </Link>
+      ) : isLink ? (
         <Anchor
           key={`${navItem.id}`}
           href={navItem.link}

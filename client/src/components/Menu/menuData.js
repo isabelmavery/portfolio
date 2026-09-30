@@ -6,7 +6,7 @@ export default [
         {
         id: 44,
         value: "Flowhub",
-        secondaryValue: "2024 - 2026",
+        secondaryValue: "Senior Software Engineer II · 2024 – Present",
         isEnd: true,
         children: [
           {
@@ -27,7 +27,7 @@ export default [
       {
         id: 2,
         value: "Traba",
-        secondaryValue: "2021 - 2023",
+        secondaryValue: "Founding Engineer · 2021 – 2023",
         isEnd: true,
         children: [
           {
@@ -54,7 +54,7 @@ export default [
       {
         id: 3,
         value: "Fanatics",
-        secondaryValue: "2018 - 2021",
+        secondaryValue: "Software Engineer II → III · 2018 – 2021",
         isEnd: true,
         children: [
           {
@@ -77,7 +77,7 @@ export default [
       {
         id: 4,
         value: "Cadence",
-        secondaryValue: "Summer 2018",
+        secondaryValue: "Software Engineering Intern · Summer 2017",
         isEnd: true,
         children: [
           {
@@ -100,15 +100,27 @@ export default [
     isEnd: true,
     children: [
       {
+        id: 46,
+        link: "/cafe",
+        value: "Cafe: order a drink at my coffee shop",
+        children: [],
+      },
+      {
+        id: 47,
+        link: "/fun",
+        value: "A lil game and a live chat room",
+        children: [],
+      },
+      {
         id: 7,
         link: "https://github.com/isabelmavery",
-        value: "Github with code to a variety of projects including this one!",
+        value: "GitHub, including the code for this site",
         children: [],
       },
       {
         id: 8,
         link: "https://medium.com/fanatics-tech-blog/enabling-fans-to-discover-their-favorite-teams-gear-43da19801b1c",
-        value: "Blog post, Building Dynamic Navigation",
+        value: "Building Dynamic Navigation (Fanatics tech blog)",
         children: [],
       },
     ],

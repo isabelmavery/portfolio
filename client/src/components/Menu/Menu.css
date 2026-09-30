@@ -11,12 +11,8 @@
   font-weight: 700;
 }
 
+/* role + dates, always visible so work history scans without clicking */
 .menu-item-header .secondary-value {
-  display: none;
-}
-
-.menu-item-header:hover .secondary-value,
-.menu-item-header .secondary-value.open {
   display: inline-block;
   color: var(--pretty-purple-dark);
   font-size: 0.9rem;
@@ -77,8 +73,9 @@
 /* menu-item-wrapper */
 .menu-item-wrapper {
   display: flex;
-  gap: 15px;
-  align-items: center;
+  flex-wrap: wrap;
+  gap: 2px 15px;
+  align-items: baseline;
 }
 
 /* For Menu Items */

@@ -43,9 +43,20 @@
 .home-intro-header {
   display: flex;
   align-items: center;
-  gap: 3px;
-  font-weight: 600;
-  font-size: 1.5rem;
+  gap: 6px;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.home-intro-header h1 {
+  margin: 0;
+  font-size: inherit;
+}
+
+@media screen and (max-width: 600px) {
+  .home-intro-header {
+    font-size: 1.4rem;
+  }
 }
 
 .headshot {
