@@ -22,7 +22,7 @@
   align-items: center;
   gap: 3px;
   font-weight: 600;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 
 .headshot {
@@ -42,6 +42,54 @@
   height: 100%;
   object-fit: cover;
   transform: scale(1.01);
+}
+
+.home-skills-text {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px 40px;
+  background-color: var(--pretty-blue-light);
+}
+
+.skill-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.skill-group-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+}
+
+.skill-group-title  {
+  padding: 5px 12px;
+  border-bottom: 5px solid var(--chip-color);
+  /* background-color: var(--primary-background-color); */
+}
+
+.skill-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.skill-chip {
+  padding: 5px 12px;
+  border: 2px solid var(--chip-color);
+  background-color: var(--primary-background-color);
+  box-shadow: var(--basic-box-shadow);
+  font-size: 0.9rem;
+  transition: transform 150ms ease;
+}
+
+.skill-chip:hover {
+  transform: translateY(-2px);
 }
 
 /* stack photo above the text on small screens */

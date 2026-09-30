@@ -5,6 +5,8 @@
   --pretty-black: #1a1b1f;
   --grey: #8a8a8a;
   --pretty-blue: #89badf;
+  --pretty-blue-lighter: #94c0e2;
+  --pretty-blue-light: #9ec6e4;
   --pretty-purple: #7297d6;
   /* one tint down from pretty purple */
   --pretty-purple-light: #80a1da;
@@ -12,6 +14,7 @@
   --pretty-orange: #eca9a9;
   --pretty-pink: #d399e7;
   --pretty-green: #d1e3bc;
+  --pretty-green-darker: #bccca9;
   --space-blue: #142c8f;
   --primary-background-color: antiquewhite;
   --basic-box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px;
@@ -100,7 +103,7 @@ html,
 }
 
 .primary-content {
-  margin: 40px 20px;
+  margin: 35px 20px;
   /* added for fun todo edit */
   background-color: var(--pretty-green);
   border-radius: 30px;
