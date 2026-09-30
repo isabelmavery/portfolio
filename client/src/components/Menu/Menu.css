@@ -6,6 +6,11 @@
   gap: 14px;
 }
 
+/* top-level section titles only, not their nested items */
+.expandable-menu > div > .menu-item-header .menu-item-wrapper {
+  font-weight: 700;
+}
+
 .menu-item-header .secondary-value {
   display: none;
 }

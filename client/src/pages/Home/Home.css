@@ -27,6 +27,8 @@
 
 .headshot {
   flex-shrink: 0;
+  /* push to the right edge, lined up with the cards below */
+  margin-left: auto;
   width: var(--headshot-size);
   height: var(--headshot-size);
   border-radius: 50%;
@@ -65,9 +67,26 @@
 }
 
 .skill-group-title  {
-  padding: 5px 12px;
-  border-bottom: 5px solid var(--chip-color);
-  /* background-color: var(--primary-background-color); */
+  position: relative;
+  padding: 5px 12px 10px;
+}
+
+/* underline skill group titles */
+.skill-group-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 5px;
+  background-color: var(--chip-color);
+  box-shadow: 0px 0.4px 1px var(--pretty-blue);
+}
+
+.bullet-wrapper .cute-bullet svg {
+  width: 40px;
+  height: 30px;
+  filter: drop-shadow(0px 1px 1px var(--pretty-blue));
 }
 
 .skill-chips {
@@ -99,5 +118,9 @@
     flex-direction: column-reverse;
     align-items: flex-start;
     gap: 20px;
+  }
+
+  .headshot {
+    margin-left: 0;
   }
 }
