@@ -17,7 +17,7 @@ export default [
           {
             id: 34,
             value: "Alongside one other engineer, launched 'Pizza Style' (scheduled) and 'Ice Cream Style' (ASAP) delivery verticals for E-commerce. Opened up a brand new revenue stream for Flowhub. Integrated with the state external regulator (Metrc) to report delivery inventory movements.",
-          }
+          },
           {
             id: 35,
             value: "React, Remix, Node, Golang, Postgres",
