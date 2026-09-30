@@ -3,6 +3,7 @@ import Wave from "../../assets/Wave";
 import headshot from "../../assets/headshot.png";
 import "./Home.css";
 import CuteBullet from "../../assets/CuteBullet";
+import Anchor from "../../base-components/Anchor/Anchor";
 
 const SKILL_GROUPS = [
   {
@@ -27,9 +28,16 @@ const SKILL_GROUPS = [
   },
 ];
 
+const CONTACT_LINKS = [
+  { label: "Resume", href: "/Isabel_Avery_Resume.pdf", download: true },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/isabel-m-avery/" },
+  { label: "Email", href: "mailto:isabelmavery@gmail.com" },
+  { label: "GitHub", href: "https://github.com/isabelmavery" },
+];
+
 function Home() {
   return (
-    <>
+    <div className="home">
       <div className="text-content home-intro">
         <div className="home-intro-text">
           <div className="home-intro-header">
@@ -41,6 +49,18 @@ function Home() {
             Fullstack engineer originally from the Chicago area. Explore to
             learn more about my background and try out some projects I had fun
             with.
+          </div>
+          <div className="home-contact-links">
+            {CONTACT_LINKS.map(({ label, href, download }) => (
+              <Anchor
+                key={label}
+                href={href}
+                ariaLabel={label}
+                download={download}
+              >
+                {label}
+              </Anchor>
+            ))}
           </div>
         </div>
         <div className="headshot">
@@ -76,7 +96,7 @@ function Home() {
       <div className="text-content primary-content">
         <Menu />
       </div>
-    </>
+    </div>
   );
 }
 

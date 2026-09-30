@@ -1,3 +1,26 @@
+/* keep the page from stretching edge to edge on wide screens */
+.home {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.home-contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 0;
+  margin-top: 6px;
+}
+
+.home-contact-links a:not(:last-child)::after {
+  content: "·";
+  margin: 0 12px;
+  color: var(--grey);
+  font-weight: 400;
+  /* inline-block keeps the dot out of the hover underline */
+  display: inline-block;
+}
+
 .home-intro {
   --headshot-size: 230px;
 

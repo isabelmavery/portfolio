@@ -113,30 +113,4 @@ export default [
       },
     ],
   },
-  {
-    id: 9,
-    value: "Want to reach out?",
-    isEnd: true,
-    children: [
-      {
-        id: 10,
-        value: "LinkedIn",
-        link: "https://www.linkedin.com/in/isabel-m-avery/",
-        children: [],
-      },
-      {
-        id: 11,
-        value: "Send me an email",
-        link: "mailto:isabelmavery@gmail.com",
-        children: [],
-      },
-      {
-        id: 45,
-        value: "Download my resume (PDF)",
-        link: "/Isabel_Avery_Resume.pdf",
-        download: true,
-        children: [],
-      },
-    ],
-  },
 ];
