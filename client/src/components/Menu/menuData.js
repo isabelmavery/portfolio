@@ -120,7 +120,7 @@ export default [
     children: [
       {
         id: 10,
-        value: "LinkedIn (a more complete resume)",
+        value: "LinkedIn",
         link: "https://www.linkedin.com/in/isabel-m-avery/",
         children: [],
       },
@@ -128,6 +128,13 @@ export default [
         id: 11,
         value: "Send me an email",
         link: "mailto:isabelmavery@gmail.com",
+        children: [],
+      },
+      {
+        id: 45,
+        value: "Download my resume (PDF)",
+        link: "/Isabel_Avery_Resume.pdf",
+        download: true,
         children: [],
       },
     ],

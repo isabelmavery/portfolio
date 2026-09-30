@@ -27,6 +27,7 @@ function MenuItemHeader({ navItem, isFolder, isOpen, handleOpen }) {
           key={`${navItem.id}`}
           href={navItem.link}
           ariaLabel={navItem.value}
+          download={navItem.download}
         >
           {navItem.value}
         </Anchor>
